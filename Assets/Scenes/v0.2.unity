@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: c0735200aa7a71241b1e5ea809b1b151, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.025438381, g: 0.023668949, b: 0.015486829, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -659,6 +659,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Window
+      objectReference: {fileID: 0}
+    - target: {fileID: 5686880552731549178, guid: eeedf450753fa944a964f753ac333a5e,
+        type: 3}
+      propertyPath: m_CellSize.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5686880552731549178, guid: eeedf450753fa944a964f753ac333a5e,
+        type: 3}
+      propertyPath: m_CellSize.y
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 5686880552731549179, guid: eeedf450753fa944a964f753ac333a5e,
         type: 3}
@@ -1322,7 +1332,7 @@ Transform:
   m_GameObject: {fileID: 219373924}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -11.92}
+  m_LocalPosition: {x: 0, y: 1, z: -10.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2184,7 +2194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -369.00003, y: 279.2}
+  m_AnchoredPosition: {x: 210, y: -67}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &691012296
@@ -2456,8 +2466,8 @@ PrefabInstance:
     - target: {fileID: 7228434464878294196, guid: 65f3b0a3cd9590e4daedc5c39b0bf4a5,
         type: 3}
       propertyPath: m_text
-      value: "Objectif :\n\nRechercher des indices dans les dossiers sur les patterns
-        \xE0 dessiner."
+      value: "Objectif :\n\nRechercher des indices dans les fichiers  pour d\xE9bloquer
+        les dossiers \xE0 l'aide du bon pattern afin de trouver le mot de passe final."
       objectReference: {fileID: 0}
     - target: {fileID: 8149878378907519989, guid: 65f3b0a3cd9590e4daedc5c39b0bf4a5,
         type: 3}
@@ -2935,7 +2945,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -369, y: 246}
+  m_AnchoredPosition: {x: -117, y: -67}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1322714729
@@ -3335,7 +3345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -369.00003, y: 211.6}
+  m_AnchoredPosition: {x: 46, y: -67}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1730272707

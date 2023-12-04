@@ -162,6 +162,22 @@ MonoBehaviour:
           imageContent: {fileID: 0}
           type: 2
           childs: []
+        - name: Folder 4
+          textFileName: 
+          textContent: 
+          password: 
+          audioContent: {fileID: 0}
+          imageContent: {fileID: 0}
+          type: 3
+          childs:
+          - name: Password
+            textFileName: Password
+            textContent: CHO7
+            password: 
+            audioContent: {fileID: 0}
+            imageContent: {fileID: 0}
+            type: 1
+            childs: []
       - name: logs.txt
         textFileName: logs.txt
         textContent: "Log- Jour 60 : La guerre qui fait rage \xE0 l'ext\xE9rieur
