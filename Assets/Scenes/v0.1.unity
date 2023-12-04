@@ -1336,6 +1336,12 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219373924}
   m_Enabled: 1
+--- !u!1 &225837266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8149878378907519989, guid: 65f3b0a3cd9590e4daedc5c39b0bf4a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 893816115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &329812530 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5686880551328501778, guid: eeedf450753fa944a964f753ac333a5e,
@@ -2450,15 +2456,33 @@ PrefabInstance:
     - target: {fileID: 7228434464878294196, guid: 65f3b0a3cd9590e4daedc5c39b0bf4a5,
         type: 3}
       propertyPath: m_text
-      value: 'Objectif :
-
-
-        Rechercher des indices dans les dossiers.'
+      value: "Objectif :\n\nRechercher des indices dans les dossiers sur les patterns
+        \xE0 dessiner."
       objectReference: {fileID: 0}
     - target: {fileID: 8149878378907519989, guid: 65f3b0a3cd9590e4daedc5c39b0bf4a5,
         type: 3}
       propertyPath: m_Name
       value: TextWIndow2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8310042053361106862, guid: 65f3b0a3cd9590e4daedc5c39b0bf4a5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8310042053361106862, guid: 65f3b0a3cd9590e4daedc5c39b0bf4a5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 225837266}
+    - target: {fileID: 8310042053361106862, guid: 65f3b0a3cd9590e4daedc5c39b0bf4a5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 8310042053361106862, guid: 65f3b0a3cd9590e4daedc5c39b0bf4a5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8441182094412799602, guid: 65f3b0a3cd9590e4daedc5c39b0bf4a5,
         type: 3}

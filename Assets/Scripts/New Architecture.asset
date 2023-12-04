@@ -27,7 +27,7 @@ MonoBehaviour:
       password: mdp1
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
-      type: 0
+      type: 3
       childs:
       - name: Folder 2
         textFileName: 
@@ -35,7 +35,7 @@ MonoBehaviour:
         password: mdp2
         audioContent: {fileID: 0}
         imageContent: {fileID: 0}
-        type: 0
+        type: 3
         childs:
         - name: logs.txt
           textFileName: logs.txt
@@ -117,7 +117,7 @@ MonoBehaviour:
         password: mdp3
         audioContent: {fileID: 0}
         imageContent: {fileID: 0}
-        type: 0
+        type: 3
         childs:
         - name: AUDIO_6.MP3
           textFileName: Enregistrement 6 - Obsession pour la Matrice
@@ -299,7 +299,7 @@ MonoBehaviour:
       imageContent: {fileID: 0}
       type: 1
       childs: []
-    - name: OPEN IT
+    - name: PATTERNS
       textFileName: 
       textContent: 
       password: 
