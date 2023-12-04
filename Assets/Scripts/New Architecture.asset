@@ -344,7 +344,7 @@ MonoBehaviour:
         textContent: 
         password: 
         audioContent: {fileID: 0}
-        imageContent: {fileID: 21300000, guid: 59af95ff19a048047b46e5403f0662c5, type: 3}
+        imageContent: {fileID: 21300000, guid: 8e370959482badb43a35bc116a6b67ab, type: 3}
         type: 4
         childs: []
     - name: .EXE

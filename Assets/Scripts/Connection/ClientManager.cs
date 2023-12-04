@@ -28,7 +28,7 @@ public class ClientManager : MonoBehaviour
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         instance = this;
         mySocket = new TcpClient();
-        SetupSocket();
+        //SetupSocket();
     }
     public void SetHostIp(string ip)
     {
