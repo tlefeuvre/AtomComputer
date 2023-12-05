@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
+
 public class FileButtonManager : MonoBehaviour
 {
     [Header("GameObjects")]
@@ -13,6 +15,8 @@ public class FileButtonManager : MonoBehaviour
     private string passwordText;
     private FileType fileType;
     private bool isLock;
+
+
     void Start()
     {
         isLock = true;
@@ -29,8 +33,11 @@ public class FileButtonManager : MonoBehaviour
         if ((fileType == FileType.SUCCESS  || fileType == FileType.LOCK) && isLock)
         {
             passwordObject.SetActive(true);
-            if (passwordText == passwordObject.GetComponentInChildren<TMP_InputField>().text)
+            if (string.Equals(passwordText, passwordObject.GetComponentInChildren<TMP_InputField>().text, StringComparison.OrdinalIgnoreCase))
                 isLock = false;
+
+            //if (passwordText == passwordObject.GetComponentInChildren<TMP_InputField>().text)
+              //  isLock = false;
             
         }
         if(fileType == FileType.SUCCESS && !isLock)

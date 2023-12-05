@@ -10,25 +10,33 @@ public class FalconManager : MonoBehaviour
     public GameObject switchButton;
     public bool canFalconRestart;
 
+    public GameObject popup;
+
    
     // Start is called before the first frame update
     void Start()
     {
-        RestartFalcon();
+        popup.SetActive(false);
+
+        FalconIsFinish();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.P)) {
+            FalconIsFinish();
+        }
     }
 
     public void FalconIsFinish()
     {
         Debug.Log("FalconIsFinish");
-        Light_01.GetComponent<MeshRenderer>().material.color = Color.green;
-        Light_01.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", Color.green);
+        popup.SetActive(true);
+
+        Light_01.GetComponent<MeshRenderer>().material.color = Color.red;
+        Light_01.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", Color.red);
 
         canFalconRestart = true;
         sendButton.SetActive(true);
@@ -45,7 +53,18 @@ public class FalconManager : MonoBehaviour
 
         canFalconRestart = false;
         sendButton.SetActive(false);
+        popup.SetActive(false);
+
         switchButton.transform.localRotation = Quaternion.Euler( 135, -90, 0);
 
     }
+    private IEnumerator popupAnimator()
+    {
+        popup.SetActive(true);
+        yield return new WaitForSeconds(5.0f);
+        popup.SetActive(false);
+
+    }
 }
+
+

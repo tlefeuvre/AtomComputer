@@ -31,12 +31,16 @@ public class WindowManager : MonoBehaviour
     public AudioClip clickAudio;
     public AudioClip onStartAudio;
     public GameObject backButton;
+    public GameObject depthPrefab;
     public Architecture architecture;
     public List<FileTemplate> arborescence = new List<FileTemplate>();
 
     private AudioSource audioSource;
+
+    private bool allUnlocked;
     void Start()
     {
+        allUnlocked = false;
         arborescence.Add(architecture.filesList[0]);
         audioSource = GetComponent<AudioSource>();
 
@@ -67,23 +71,35 @@ public class WindowManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
+        depthPrefab.GetComponentInChildren<TMP_Text>().text ="Niveau"+'\n'+ arborescence[arborescence.Count - 1].depthIndex.ToString();
         GetComponent<GridLayoutGroup>().enabled = true;
 
         /* Instantiates file childs */
         int id = arborescence.Count - 1;
-       
+
+        if(arborescence[id].unlockAll == true)
+            allUnlocked = true;
+
         if (arborescence[id].type == FileType.FOLDER || arborescence[id].type == FileType.LOCK)
         {
             backButton.SetActive(true);
+            depthPrefab.SetActive(true );
             for (int i = 0; i < arborescence[id].childs.Count; i++)
             {
-               NewFile(filesImagesDictionnary[arborescence[id].childs[i].type], i, arborescence[id].childs[i].name, arborescence[id].childs[i].type, arborescence[id].childs[i].password);
+                if (allUnlocked && arborescence[id].childs[i].canBeUnlock && arborescence[id].childs[i].type == FileType.LOCK)
+                    arborescence[id].childs[i].type = FileType.FOLDER;
+                else if(!allUnlocked && arborescence[id].childs[i].canBeUnlock && arborescence[id].childs[i].type == FileType.FOLDER)
+                    arborescence[id].childs[i].type = FileType.LOCK;
+
+
+                NewFile(filesImagesDictionnary[arborescence[id].childs[i].type], i, arborescence[id].childs[i].name, arborescence[id].childs[i].type, arborescence[id].childs[i].password);
             }
         }
 
         else if(arborescence[id].type == FileType.TEXT)
         {
             backButton.SetActive(false);
+            depthPrefab.SetActive(false);
 
             OpenTextFile(arborescence[id].textFileName, arborescence[id].textContent);
         }
@@ -91,12 +107,15 @@ public class WindowManager : MonoBehaviour
         else if (arborescence[id].type == FileType.AUDIO)
         {
             backButton.SetActive(false);
+            depthPrefab.SetActive(false);
 
             OpenAudioFile(arborescence[id].audioContent, arborescence[id].textFileName);
         }
         else if (arborescence[id].type == FileType.IMAGE)
         {
             backButton.SetActive(false);
+            depthPrefab.SetActive(false);
+
             OpenImageFile(arborescence[id].imageContent, arborescence[id].textFileName);
         }
     }
@@ -141,7 +160,9 @@ public class WindowManager : MonoBehaviour
         newFile.GetComponent<RectTransform>().anchoredPosition = new Vector2(-1 * transform.GetComponent<RectTransform>().anchoredPosition.x, 0);
         newFile.transform.localPosition = new Vector3(newFile.transform.localPosition.x, newFile.transform.localPosition.y, 0);
 
-        newFile.GetComponent<AudioFileManager>().SetParameters(fileName);
+        float clipLenght = audioClip.length;
+        
+        newFile.GetComponent<AudioFileManager>().SetParameters(fileName, clipLenght);
 
 
         audioSource.clip = audioClip;

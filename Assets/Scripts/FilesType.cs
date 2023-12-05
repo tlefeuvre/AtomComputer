@@ -20,6 +20,9 @@ public class FileTemplate
     public string textFileName;
     public string textContent;
     public string password;
+    public int depthIndex;
+    public bool canBeUnlock;
+    public bool unlockAll;
     public AudioClip audioContent;
     public Sprite imageContent;
     public FileType type;

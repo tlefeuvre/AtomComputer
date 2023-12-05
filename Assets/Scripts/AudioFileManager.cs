@@ -6,6 +6,7 @@ using UnityEngine;
 public class AudioFileManager : MonoBehaviour
 {
     public TMP_Text fileName;
+    public TMP_Text audioLenght;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +23,9 @@ public class AudioFileManager : MonoBehaviour
     {
         WindowManager.instance.GoBack();
     }
-    public void SetParameters(string name)
+    public void SetParameters(string name, float clipLenght)
     {
         fileName.text = name;
+        audioLenght.text = "Durée: " + clipLenght.ToString()+"s";
     }
 }

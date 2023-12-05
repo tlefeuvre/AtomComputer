@@ -17,7 +17,10 @@ public class TextFileManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            Close();
+        }
     }
 
     public void SetParameters(string name, string content)

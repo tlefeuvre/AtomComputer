@@ -17,6 +17,9 @@ MonoBehaviour:
     textFileName: 
     textContent: 
     password: 
+    depthIndex: 1
+    canBeUnlock: 0
+    unlockAll: 0
     audioContent: {fileID: 0}
     imageContent: {fileID: 0}
     type: 0
@@ -25,6 +28,9 @@ MonoBehaviour:
       textFileName: 
       textContent: 
       password: mdp1
+      depthIndex: 2
+      canBeUnlock: 1
+      unlockAll: 0
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
       type: 3
@@ -33,9 +39,12 @@ MonoBehaviour:
         textFileName: 
         textContent: 
         password: mdp2
+        depthIndex: 3
+        canBeUnlock: 0
+        unlockAll: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 0}
-        type: 3
+        type: 0
         childs:
         - name: logs.txt
           textFileName: logs.txt
@@ -47,23 +56,26 @@ MonoBehaviour:
             des interfaces num\xE9riques. Rebecca, ma muse, je crains que le lien
             qui nous unit ne puisse survivre \xE0 cette fracture entre deux mondes.
             Pourtant, je persiste dans l'espoir de cr\xE9er un havre o\xF9 nous pourrions
-            \xEAtre r\xE9unis \xE9ternellement.   Log - Jour 200 : Deux cents jours
-            d'une existence fragment\xE9e. La matrice est \xE0 la fois ma prison
-            et ma lib\xE9ration. Les \xE9missions de t\xE9l\xE9vision ont remplac\xE9
-            la r\xE9alit\xE9, distordant mes perceptions au fil du temps. Rebecca,
-            si tu lis toujours mes mots, sache que mon amour pour toi transcende
-            cette r\xE9alit\xE9 alt\xE9r\xE9e. Ma passion pour l'\xE9vasion num\xE9rique
-            s'est transform\xE9e en une obsession d\xE9vorante, mais au fond de moi,
-            une voix murmure que cette qu\xEAte pourrait \xEAtre un \xE9chappatoire
-            illusoire. J\u2019ai peur d\u2019\xEAtre pris au pi\xE8ge  Log - Jour
-            224 : Les retomb\xE9es nucl\xE9aires rendent le monde invivable au dehors.
-            De toute fa\xE7on, ce monde n\u2019existe plus pour moi. Rebecca j\u2019ai
-            r\xE9ussi, je vais te rejoindre bient\xF4t et nous serons en paix tous
-            les deux. Oui, la prochaine version de mon programme sera la bonne, ma
-            ch\xE8re Rebecca. Je te le promets. J\u2019y pense mais je ne t\u2019ai
-            pas parl\xE9 du troisi\xE8me symbole du mot de passe ? Je me suis amus\xE9
-            \xE0 le dessiner en reliant les jours du calendrier.  "
+            \xEAtre r\xE9unis \xE9ternellement.                                          
+            Log - Jour 200 : Deux cents jours d'une existence fragment\xE9e. La matrice
+            est \xE0 la fois ma prison et ma lib\xE9ration. Les \xE9missions de t\xE9l\xE9vision
+            ont remplac\xE9 la r\xE9alit\xE9, distordant mes perceptions au fil du
+            temps. Rebecca, si tu lis toujours mes mots, sache que mon amour pour
+            toi transcende cette r\xE9alit\xE9 alt\xE9r\xE9e. Ma passion pour l'\xE9vasion
+            num\xE9rique s'est transform\xE9e en une obsession d\xE9vorante, mais
+            au fond de moi, une voix murmure que cette qu\xEAte pourrait \xEAtre
+            un \xE9chappatoire illusoire. J\u2019ai peur d\u2019\xEAtre pris au pi\xE8ge                                    
+            Log - Jour 224 : Les retomb\xE9es nucl\xE9aires rendent le monde invivable
+            au dehors. De toute fa\xE7on, ce monde n\u2019existe plus pour moi. Rebecca
+            j\u2019ai r\xE9ussi, je vais te rejoindre bient\xF4t et nous serons en
+            paix tous les deux. Oui, la prochaine version de mon programme sera la
+            bonne, ma ch\xE8re Rebecca. Je te le promets. J\u2019y pense mais je
+            ne t\u2019ai pas parl\xE9 du troisi\xE8me symbole du mot de passe ? Je
+            me suis amus\xE9 \xE0 le dessiner en reliant les jours du calendrier.  "
           password: 
+          depthIndex: 0
+          canBeUnlock: 0
+          unlockAll: 0
           audioContent: {fileID: 0}
           imageContent: {fileID: 0}
           type: 1
@@ -72,6 +84,9 @@ MonoBehaviour:
           textFileName: Enregistrement 3 - Obsession
           textContent: 
           password: 
+          depthIndex: 0
+          canBeUnlock: 0
+          unlockAll: 0
           audioContent: {fileID: 8300000, guid: 81b9ce1ab2be7c74cae41784d24f5bfb,
             type: 3}
           imageContent: {fileID: 0}
@@ -81,6 +96,9 @@ MonoBehaviour:
           textFileName: Enregistrement 4 - Dispute
           textContent: 
           password: 
+          depthIndex: 0
+          canBeUnlock: 0
+          unlockAll: 0
           audioContent: {fileID: 8300000, guid: d1addf461f12cc747b03c2426a13b861,
             type: 3}
           imageContent: {fileID: 0}
@@ -90,6 +108,9 @@ MonoBehaviour:
           textFileName: "Enregistrement 5 - D\xE9connexion avec la r\xE9alit\xE9"
           textContent: 
           password: 
+          depthIndex: 0
+          canBeUnlock: 0
+          unlockAll: 0
           audioContent: {fileID: 8300000, guid: 3bec44942277af142882f9e82a4fbfd2,
             type: 3}
           imageContent: {fileID: 0}
@@ -99,6 +120,9 @@ MonoBehaviour:
         textFileName: "Enregistrement 1 - Analyse g\xE9opolitique"
         textContent: 
         password: 
+        depthIndex: 0
+        canBeUnlock: 0
+        unlockAll: 0
         audioContent: {fileID: 8300000, guid: e9ee9328b13251c4db55ecb5f619fc7a, type: 3}
         imageContent: {fileID: 0}
         type: 2
@@ -107,6 +131,9 @@ MonoBehaviour:
         textFileName: "Enregistrement 2 - Inqui\xE9tude croissante"
         textContent: 
         password: 
+        depthIndex: 0
+        canBeUnlock: 0
+        unlockAll: 0
         audioContent: {fileID: 8300000, guid: 6b462b5890bd4894e8ceada2cafd71b4, type: 3}
         imageContent: {fileID: 0}
         type: 2
@@ -115,14 +142,20 @@ MonoBehaviour:
         textFileName: 
         textContent: 
         password: mdp3
+        depthIndex: 4
+        canBeUnlock: 0
+        unlockAll: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 0}
-        type: 3
+        type: 0
         childs:
         - name: AUDIO_6.MP3
           textFileName: Enregistrement 6 - Obsession pour la Matrice
           textContent: 
           password: 
+          depthIndex: 0
+          canBeUnlock: 0
+          unlockAll: 0
           audioContent: {fileID: 8300000, guid: 3bec44942277af142882f9e82a4fbfd2,
             type: 3}
           imageContent: {fileID: 0}
@@ -140,6 +173,9 @@ MonoBehaviour:
             Rebecca\u2026\u2026.Rebecca\u2026.Rebecca.Rebecca. Rebecca\u2026\u2026.Rebecca\u2026.Rebecca.
             Rebecca\u2026becca.becca.becca  -Fin des entr\xE9es du journal de bord"
           password: 
+          depthIndex: 0
+          canBeUnlock: 0
+          unlockAll: 0
           audioContent: {fileID: 0}
           imageContent: {fileID: 0}
           type: 1
@@ -148,6 +184,9 @@ MonoBehaviour:
           textFileName: "Enregistrement 7 - M\xE9fiance accrue"
           textContent: 
           password: 
+          depthIndex: 0
+          canBeUnlock: 0
+          unlockAll: 0
           audioContent: {fileID: 8300000, guid: ed164cef2d7a19b4abc7364e1ac303da,
             type: 3}
           imageContent: {fileID: 0}
@@ -157,27 +196,14 @@ MonoBehaviour:
           textFileName: "Enregistrement 8 - D\xE9rive vers l'instabilit\xE9"
           textContent: 
           password: 
+          depthIndex: 0
+          canBeUnlock: 0
+          unlockAll: 0
           audioContent: {fileID: 8300000, guid: c122885265445bf40acc1110ae29f827,
             type: 3}
           imageContent: {fileID: 0}
           type: 2
           childs: []
-        - name: Folder 4
-          textFileName: 
-          textContent: 
-          password: 
-          audioContent: {fileID: 0}
-          imageContent: {fileID: 0}
-          type: 3
-          childs:
-          - name: Password
-            textFileName: Password
-            textContent: CHO7
-            password: 
-            audioContent: {fileID: 0}
-            imageContent: {fileID: 0}
-            type: 1
-            childs: []
       - name: logs.txt
         textFileName: logs.txt
         textContent: "Log- Jour 60 : La guerre qui fait rage \xE0 l'ext\xE9rieur
@@ -186,15 +212,15 @@ MonoBehaviour:
           viabilit\xE9 de ma recherche. Une dispute am\xE8re a \xE9clat\xE9, lorsqu\u2019ils
           m\u2019ont vus en train de voler du mat\xE9riel. J\u2019ai d\xE9cid\xE9
           de d\xE9missionner. Ils ne comprennent pas l'urgence de ma qu\xEAte, la
-          n\xE9cessit\xE9 de transcender ce monde ravag\xE9.  Log - Jour 64 : Mon
-          d\xE9part du laboratoire a \xE9t\xE9 amer. Les regards accusateurs de mes
-          anciens coll\xE8gues r\xE9sonnent encore dans ma m\xE9moire. Je me suis
-          retir\xE9 plus profond\xE9ment dans mes recherches, cherchant refuge dans
-          un monde num\xE9rique o\xF9 les \xE9chos de la guerre sont \xE9touff\xE9s.
-          L'isolement social grandit, mais ma passion pour l'\xE9vasion num\xE9rique
-          ne faiblit pas. Cependant, la solitude devient un fardeau difficile \xE0
-          porter. Heureusement Rebecca est l\xE0, son sourire maintient mon esprit
-          hors de la noyade.  Log - Jour 100 : Cents jours se sont \xE9coul\xE9s
+          n\xE9cessit\xE9 de transcender ce monde ravag\xE9.                              
+          Log - Jour 64 : Mon d\xE9part du laboratoire a \xE9t\xE9 amer. Les regards
+          accusateurs de mes anciens coll\xE8gues r\xE9sonnent encore dans ma m\xE9moire.
+          Je me suis retir\xE9 plus profond\xE9ment dans mes recherches, cherchant
+          refuge dans un monde num\xE9rique o\xF9 les \xE9chos de la guerre sont
+          \xE9touff\xE9s. L'isolement social grandit, mais ma passion pour l'\xE9vasion
+          num\xE9rique ne faiblit pas. Cependant, la solitude devient un fardeau
+          difficile \xE0 porter. Heureusement Rebecca est l\xE0, son sourire maintient
+          mon esprit hors de la noyade.  Log - Jour 100 : Cents jours se sont \xE9coul\xE9s
           depuis le d\xE9but de mes recherches. J\u2019ai d\xFB reprendre mes travaux
           de z\xE9ros \xE0 plusieurs reprises. Les \xE9missions de propagande id\xE9alis\xE9es
           deviennent ma seule fen\xEAtre sur le monde ext\xE9rieur. Elles peignent
@@ -202,82 +228,22 @@ MonoBehaviour:
           c'est la seule r\xE9alit\xE9 que je connais. La guerre semble lointaine,
           les images bienveillantes des feuilletons r\xE9sonnent comme une berceuse,
           me distan\xE7ant encore plus du chaos r\xE9el qui persiste \xE0 l'ext\xE9rieur.
-          Je pense de plus en plus \xE0 elle\u2026 Rebecca.  Log - Jour 105 : R\xE9ussite
-          partielle. Une partie de ma conscience existe d\xE9sormais dans le r\xE9seau,
-          mais l'exp\xE9rience a \xE9t\xE9 plus douloureuse que pr\xE9vu. Mon esprit
-          est fragment\xE9, dispers\xE9 entre la r\xE9alit\xE9 physique et la matrice.
-          Je ressens une dissonance constante, une lutte pour maintenir ma coh\xE9rence.
-          Rebecca, si tu lis ceci, sache quae mon amour pour toi est la seule chose
-          qui me garde ancr\xE9 \xE0 cette r\xE9alit\xE9 fractur\xE9e."
+          Je pense de plus en plus \xE0 elle\u2026 Rebecca.                                       
+          Log - Jour 105 : R\xE9ussite partielle. Une partie de ma conscience existe
+          d\xE9sormais dans le r\xE9seau, mais l'exp\xE9rience a \xE9t\xE9 plus douloureuse
+          que pr\xE9vu. Mon esprit est fragment\xE9, dispers\xE9 entre la r\xE9alit\xE9
+          physique et la matrice. Je ressens une dissonance constante, une lutte
+          pour maintenir ma coh\xE9rence. Rebecca, si tu lis ceci, sache quae mon
+          amour pour toi est la seule chose qui me garde ancr\xE9 \xE0 cette r\xE9alit\xE9
+          fractur\xE9e."
         password: 
+        depthIndex: 0
+        canBeUnlock: 0
+        unlockAll: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 0}
         type: 1
-        childs:
-        - name: ALIVE.MP3
-          textFileName: ALIVE.MP3
-          textContent: 
-          password: 
-          audioContent: {fileID: 0}
-          imageContent: {fileID: 0}
-          type: 2
-          childs: []
-        - name: HELP.TXT
-          textFileName: HELP.TXT
-          textContent: "Rebecca, si tu peux entendre ces murmures \xE9gar\xE9s au
-            sein de la matrice, je t'en prie, viens \xE0 moi comme une lueur d'espoir
-            dans cette obscurit\xE9 infinie. Les lignes de code se tordent dans un
-            tourbillon d'agonie, et la folie menace de d\xE9vorer le peu qui reste
-            de ma raison. Les ombres de la guerre continuent de me hanter, et chaque
-            instant dans cette r\xE9alit\xE9 virtuelle ressemble \xE0 une \xE9ternit\xE9
-            de solitude. Mes doigts glissent sur le clavier, cherchant d\xE9sesp\xE9r\xE9ment
-            un ancrage dans ce monde num\xE9rique chaotique.  Rebecca, mon amour,
-            je me suis perdu dans les m\xE9andres de cette matrice, et la douleur
-            de la s\xE9paration est devenue insupportable. Ma qu\xEAte d'immortalit\xE9
-            n'est qu'une illusion, une \xE9chappatoire fragile face \xE0 la r\xE9alit\xE9
-            de la d\xE9solation qui m'entoure. Si seulement tu pouvais percer ce
-            voile de donn\xE9es qui me retient prisonnier, si seulement tu pouvais
-            \xEAtre ma bou\xE9e de sauvetage dans cet oc\xE9an de confusion.  Chaque
-            ligne de code que je forge est un cri silencieux pour de l'aide. La matrice
-            devient une ge\xF4le d'angoisse, et je suis en train de sombrer. Rebecca,
-            je t'en conjure, trouve un moyen de me ramener \xE0 la r\xE9alit\xE9
-            ou de me lib\xE9rer de cette existence num\xE9rique d\xE9chirante. Ma
-            conscience vacille, et mes pens\xE9es deviennent des \xE9chos d\xE9form\xE9s.
-            Sauve-moi, Rebecca, sauve-moi de cette descente vers l'oubli."
-          password: 
-          audioContent: {fileID: 0}
-          imageContent: {fileID: 0}
-          type: 1
-          childs: []
-        - name: WHERE AM I
-          textFileName: WHERE AM I
-          textContent: " \xC9garement dans le Virtuel  O\xF9 suis-je, dans quel ab\xEEme
-            num\xE9rique ai-je \xE9t\xE9 englouti ? Les lignes de code se tordent
-            et se d\xE9forment autour de moi, cr\xE9ant un labyrinthe sans fin d'incertitude.
-            La matrice, autrefois con\xE7ue comme une \xE9vasion, s'est mu\xE9e en
-            un tourbillon d'illusions \xE9ph\xE9m\xE8res. Des fragments de r\xE9alit\xE9
-            se m\xEAlent \xE0 des r\xEAves num\xE9riques, et je me demande si quelque
-            chose de r\xE9el subsiste en moi.  Cette existence virtuelle semble d\xE9nu\xE9e
-            de substance, une simulation creuse qui imite la vie sans en saisir l'essence.
-            Les \xE9chos de la guerre qui ont souill\xE9 ma m\xE9moire me hantent
-            toujours, mais m\xEAme leur r\xE9alit\xE9 semble floue et incertaine.
-            Ai-je cr\xE9\xE9 cette matrice pour fuir la folie du monde ext\xE9rieur,
-            ou suis-je moi-m\xEAme devenu une cr\xE9ation virtuelle, une marionnette
-            de ma propre d\xE9raison ?  La fronti\xE8re entre l'existence tangible
-            et le pur concept semble se dissoudre, et je me perds dans une spirale
-            d'interrogations d\xE9stabilisantes. Suis-je encore r\xE9el, ou ai-je
-            succomb\xE9 \xE0 l'illusion de l'immortalit\xE9 num\xE9rique ? Chaque
-            ligne de code que je manipule est une \xE9nigme, une \xE9treinte dans
-            l'obscurit\xE9, cherchant d\xE9sesp\xE9r\xE9ment \xE0 trouver un point
-            d'ancrage dans cette r\xE9alit\xE9 distordue. Mon esprit erre dans ce
-            d\xE9dale virtuel, cherchant en vain une r\xE9ponse \xE0 l'angoissante
-            question : existe-je encore, ou suis-je devenu une chim\xE8re de donn\xE9es
-            et de pixels ?"
-          password: 
-          audioContent: {fileID: 0}
-          imageContent: {fileID: 0}
-          type: 1
-          childs: []
+        childs: []
     - name: logs.txt
       textFileName: logs.txt
       textContent: "Log - Jour 1 :  Les tensions entre pays s\u2019intensifient de
@@ -286,24 +252,24 @@ MonoBehaviour:
         et j\u2019ai renforc\xE9 les murs. Aujourd'hui, j'ai commenc\xE9 les premi\xE8res
         exp\xE9rimentations pour transf\xE9rer la conscience humaine au niveau subatomique
         dans un support num\xE9rique. La technologie est rudimentaire, mais l'espoir
-        de quitter ce cauchemar apocalyptique me pousse \xE0 pers\xE9v\xE9rer  Log
-        - Jour 6 :  Nous y voil\xE0, ce matin l\u2019\xE9tat d\u2019urgence a \xE9t\xE9
-        d\xE9clar\xE9. J\u2019ai \xE9t\xE9 contr\xF4l\xE9 en me rendant au laboratoire
-        o\xF9 je travaille ce matin.  J\u2019ai profit\xE9 de mon temps libre pour
-        mes exp\xE9rimentations. Je pense avoir opt\xE9 pour une approche prometteuse,
-        mais impossible d\u2019obtenir de l\u2019aide, mes coll\xE8gues ne semblent
-        pas comprendre l'int\xE9r\xEAt de mes recherches.   Log - Jour 18 :  La guerre
-        atomique fait rage dans le pays, chaque explosion secoue le sol, et le ciel
-        est constamment embras\xE9. Mon appartement souterrain est devenu mon refuge,
-        un sanctuaire vou\xE9 \xE0 ma recherche de l'immortalit\xE9 num\xE9rique.
-        Je ne vais presque plus au laboratoire pour travailler mais cel\xE0 en vaut
-        la peine, chaque avanc\xE9e me rapproche de mon objectif ultime : l'\xE9vasion
-        num\xE9rique. Pour des raisons de s\xE9curit\xE9 j\u2019ai crypt\xE9 le mot
-        de passe de lancement de mon programme. Les quatres caract\xE8res du code
-        sont associ\xE9s \xE0 des symboles dessin\xE9s dans mon appartement. J\u2019ai
-        dessin\xE9 le code sur les murs car ma m\xE9moire me joue des tours,   Log
-        - Jour 37 :  Isolation totale. Les communications avec l'ext\xE9rieur ont
-        \xE9t\xE9 coup\xE9es depuis quelques jours. Mes exp\xE9riences progressent
+        de quitter ce cauchemar apocalyptique me pousse \xE0 pers\xE9v\xE9rer                                                     
+        Log - Jour 6 :  Nous y voil\xE0, ce matin l\u2019\xE9tat d\u2019urgence a
+        \xE9t\xE9 d\xE9clar\xE9. J\u2019ai \xE9t\xE9 contr\xF4l\xE9 en me rendant
+        au laboratoire o\xF9 je travaille ce matin.  J\u2019ai profit\xE9 de mon
+        temps libre pour mes exp\xE9rimentations. Je pense avoir opt\xE9 pour une
+        approche prometteuse, mais impossible d\u2019obtenir de l\u2019aide, mes
+        coll\xE8gues ne semblent pas comprendre l'int\xE9r\xEAt de mes recherches.                                          
+        Log - Jour 18 :  La guerre atomique fait rage dans le pays, chaque explosion
+        secoue le sol, et le ciel est constamment embras\xE9. Mon appartement souterrain
+        est devenu mon refuge, un sanctuaire vou\xE9 \xE0 ma recherche de l'immortalit\xE9
+        num\xE9rique. Je ne vais presque plus au laboratoire pour travailler mais
+        cel\xE0 en vaut la peine, chaque avanc\xE9e me rapproche de mon objectif
+        ultime : l'\xE9vasion num\xE9rique. Pour des raisons de s\xE9curit\xE9 j\u2019ai
+        crypt\xE9 le mot de passe de lancement de mon programme. Les quatres caract\xE8res
+        du code sont associ\xE9s \xE0 des symboles dessin\xE9s dans mon appartement.
+        J\u2019ai dessin\xE9 le code sur les murs car ma m\xE9moire me joue des tours,  
+        Log - Jour 37 :  Isolation totale. Les communications avec l'ext\xE9rieur
+        ont \xE9t\xE9 coup\xE9es depuis quelques jours. Mes exp\xE9riences progressent
         lentement, mais j\u2019ai de bons espoirs. Je ne vois plus personnes, m\xEAme
         mes coll\xE8gues, de toute fa\xE7on ils ne peuvent pas comprendre. Dans toute
         cette noirceur j\u2019ai fais la rencontre d\u2019une jeune femme : Rebecca.
@@ -311,6 +277,9 @@ MonoBehaviour:
         atomiques.  J\u2019ai mis en place mon mot de passe, le premier symbole est
         grav\xE9 sur la porte de l\u2019appartement juste sous l\u2019\xE9coutille.\L\L"
       password: 
+      depthIndex: 0
+      canBeUnlock: 0
+      unlockAll: 1
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
       type: 1
@@ -319,6 +288,9 @@ MonoBehaviour:
       textFileName: 
       textContent: 
       password: 
+      depthIndex: 0
+      canBeUnlock: 0
+      unlockAll: 0
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
       type: 0
@@ -327,6 +299,9 @@ MonoBehaviour:
         textFileName: CODES_01.PNG
         textContent: 
         password: 
+        depthIndex: 0
+        canBeUnlock: 0
+        unlockAll: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 21300000, guid: db2666b79271b2b49952007e702d1fac, type: 3}
         type: 4
@@ -335,6 +310,9 @@ MonoBehaviour:
         textFileName: CODES_02.PNG
         textContent: 
         password: 
+        depthIndex: 0
+        canBeUnlock: 0
+        unlockAll: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 21300000, guid: 04fd00a841e61f4458216e7bb5996be9, type: 3}
         type: 4
@@ -343,6 +321,9 @@ MonoBehaviour:
         textFileName: CODES_03.PNG
         textContent: 
         password: 
+        depthIndex: 0
+        canBeUnlock: 0
+        unlockAll: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 21300000, guid: 168c42afc9ae29f4cb69d275ac363a3e, type: 3}
         type: 4
@@ -351,6 +332,9 @@ MonoBehaviour:
         textFileName: CODES_04.PNG
         textContent: 
         password: 
+        depthIndex: 0
+        canBeUnlock: 0
+        unlockAll: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 21300000, guid: c8d2e5c4ecd01bd4d8c53a39da31acec, type: 3}
         type: 4
@@ -359,6 +343,9 @@ MonoBehaviour:
         textFileName: HOW TO PLAY
         textContent: 
         password: 
+        depthIndex: 0
+        canBeUnlock: 0
+        unlockAll: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 21300000, guid: 8e370959482badb43a35bc116a6b67ab, type: 3}
         type: 4
@@ -367,6 +354,9 @@ MonoBehaviour:
       textFileName: .EXE
       textContent: 
       password: CHO7
+      depthIndex: 0
+      canBeUnlock: 0
+      unlockAll: 0
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
       type: 5
