@@ -9,7 +9,7 @@ public class FalconManager : MonoBehaviour
     public GameObject sendButton;
     public GameObject switchButton;
     public bool canFalconRestart;
-
+    public GameObject switchPrefab;
     public GameObject popup;
 
    
@@ -34,7 +34,7 @@ public class FalconManager : MonoBehaviour
     {
         Debug.Log("FalconIsFinish");
         popup.SetActive(true);
-
+        switchPrefab.GetComponent<Outline>().enabled = true;
         Light_01.GetComponent<MeshRenderer>().material.color = Color.red;
         Light_01.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", Color.red);
 
@@ -47,6 +47,8 @@ public class FalconManager : MonoBehaviour
 
     public void RestartFalcon()
     {
+        switchPrefab.GetComponent<Outline>().enabled = false;
+
         Debug.Log("RestartFalcon");
         Light_01.GetComponent<MeshRenderer>().material.color = Color.yellow;
         Light_01.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", Color.yellow);
