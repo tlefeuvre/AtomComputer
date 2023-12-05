@@ -12,12 +12,13 @@ public class FalconManager : MonoBehaviour
     public GameObject switchPrefab;
     public GameObject popup;
 
-   
+    public bool isDrawing;
+    private MeshRenderer lightMeshRenderer;
     // Start is called before the first frame update
     void Start()
     {
         popup.SetActive(false);
-
+        lightMeshRenderer = Light_01.GetComponent<MeshRenderer>();
         FalconIsFinish();
 
     }
@@ -28,15 +29,29 @@ public class FalconManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.P)) {
             FalconIsFinish();
         }
+
+        if (!isDrawing)
+        {
+            lightMeshRenderer.material.SetColor("_EmissionColor", Color.red*Mathf.Clamp(Mathf.Cos(Time.time*20),0,1)*10);
+
+        }
+        else
+        {
+            //lightMeshRenderer.material.SetColor("_EmissionColor", Color.yellow * Mathf.Clamp(Mathf.Cos(Time.time * 5), 0, 1) * 10);
+
+        }
     }
 
     public void FalconIsFinish()
     {
         Debug.Log("FalconIsFinish");
         popup.SetActive(true);
-        switchPrefab.GetComponent<Outline>().enabled = true;
-        Light_01.GetComponent<MeshRenderer>().material.color = Color.red;
-        Light_01.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", Color.red);
+        //switchPrefab.GetComponent<Outline>().enabled = true;
+        switchPrefab.GetComponent<Outline>().OutlineColor = Color.green;
+
+        isDrawing = false;
+        lightMeshRenderer.material.color = Color.red;
+        lightMeshRenderer.material.SetColor("_EmissionColor", Color.red);
 
         canFalconRestart = true;
         sendButton.SetActive(true);
@@ -47,11 +62,14 @@ public class FalconManager : MonoBehaviour
 
     public void RestartFalcon()
     {
-        switchPrefab.GetComponent<Outline>().enabled = false;
+        //switchPrefab.GetComponent<Outline>().enabled = false;
+        switchPrefab.GetComponent<Outline>().OutlineColor = Color.red;
+
+        isDrawing = true;
 
         Debug.Log("RestartFalcon");
-        Light_01.GetComponent<MeshRenderer>().material.color = Color.yellow;
-        Light_01.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", Color.yellow);
+        lightMeshRenderer.material.color = Color.yellow;
+        lightMeshRenderer.material.SetColor("_EmissionColor", Color.yellow);
 
         canFalconRestart = false;
         sendButton.SetActive(false);
