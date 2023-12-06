@@ -24,7 +24,7 @@ MonoBehaviour:
     imageContent: {fileID: 0}
     type: 0
     childs:
-    - name: Folder 1
+    - name: Folder 2
       textFileName: 
       textContent: 
       password: mdp1
@@ -33,9 +33,9 @@ MonoBehaviour:
       unlockAll: 0
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
-      type: 3
+      type: 0
       childs:
-      - name: Folder 2
+      - name: Folder 3
         textFileName: 
         textContent: 
         password: mdp2
@@ -81,7 +81,7 @@ MonoBehaviour:
           type: 1
           childs: []
         - name: AUDIO_3.MP3
-          textFileName: Enregistrement 3 - Obsession
+          textFileName: 'Enregistrement 3 '
           textContent: 
           password: 
           depthIndex: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
           type: 2
           childs: []
         - name: AUDIO_4.MP3
-          textFileName: Enregistrement 4 - Dispute
+          textFileName: Enregistrement 4
           textContent: 
           password: 
           depthIndex: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
           type: 2
           childs: []
         - name: AUDIO_5.MP3
-          textFileName: "Enregistrement 5 - D\xE9connexion avec la r\xE9alit\xE9"
+          textFileName: 'Enregistrement 5 '
           textContent: 
           password: 
           depthIndex: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
           type: 2
           childs: []
       - name: AUDIO_1.MP3
-        textFileName: "Enregistrement 1 - Analyse g\xE9opolitique"
+        textFileName: Enregistrement 1
         textContent: 
         password: 
         depthIndex: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
         type: 2
         childs: []
       - name: AUDIO_2.MP3
-        textFileName: "Enregistrement 2 - Inqui\xE9tude croissante"
+        textFileName: Enregistrement 2
         textContent: 
         password: 
         depthIndex: 0
@@ -138,7 +138,7 @@ MonoBehaviour:
         imageContent: {fileID: 0}
         type: 2
         childs: []
-      - name: Folder 3
+      - name: Folder 4
         textFileName: 
         textContent: 
         password: mdp3
@@ -150,7 +150,7 @@ MonoBehaviour:
         type: 0
         childs:
         - name: AUDIO_6.MP3
-          textFileName: Enregistrement 6 - Obsession pour la Matrice
+          textFileName: Enregistrement 6
           textContent: 
           password: 
           depthIndex: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
           type: 1
           childs: []
         - name: AUDIO_7.MP3
-          textFileName: "Enregistrement 7 - M\xE9fiance accrue"
+          textFileName: Enregistrement 7
           textContent: 
           password: 
           depthIndex: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
           type: 2
           childs: []
         - name: AUDIO_8.MP3
-          textFileName: "Enregistrement 8 - D\xE9rive vers l'instabilit\xE9"
+          textFileName: Enregistrement 8
           textContent: 
           password: 
           depthIndex: 0

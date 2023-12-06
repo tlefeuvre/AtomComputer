@@ -162,7 +162,7 @@ public class WindowManager : MonoBehaviour
 
         float clipLenght = audioClip.length;
         
-        newFile.GetComponent<AudioFileManager>().SetParameters(fileName, clipLenght);
+        newFile.GetComponent<AudioFileManager>().SetParameters(fileName, clipLenght, audioClip);
 
 
         audioSource.clip = audioClip;
