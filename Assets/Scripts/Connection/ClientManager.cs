@@ -87,6 +87,7 @@ public class ClientManager : MonoBehaviour
 
     public void SendMessage(int text)
     {
+        Debug.Log("text  envoyé :" + text);
         Byte[] sendBytes = System.Text.Encoding.UTF8.GetBytes(text + "\n");
         mySocket.GetStream().Write(sendBytes, 0, sendBytes.Length);
     }

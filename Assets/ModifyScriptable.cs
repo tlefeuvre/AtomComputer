@@ -15,6 +15,8 @@ public class ModifyScriptable : MonoBehaviour
 
     public GameObject unlockPopup;
     public TMP_Text unlockPopupText;
+
+
     private void Awake()
     {
         instance = this;
@@ -68,6 +70,7 @@ public class ModifyScriptable : MonoBehaviour
 
     public void GetUnlockFolderName(string folderName)
     {
+        Debug.Log("GetUnlockFolderName: " + folderName);
         UnlockFolder(architecture.filesList[0], folderName);
         unlockPopupText.text = folderName + " ouvert";
         unlockPopup.SetActive(true);

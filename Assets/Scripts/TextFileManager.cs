@@ -43,5 +43,6 @@ public class TextFileManager : MonoBehaviour
     {
         ClientManager.instance.SendMessage(idToSend);
     }
+ 
 }
 

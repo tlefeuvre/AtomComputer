@@ -17,26 +17,30 @@ public class FileButtonManager : MonoBehaviour
     private FileType fileType;
     private bool isLock;
 
-
+    public string fileName;
     void Start()
     {
         isLock = true;
        
         passwordObject.SetActive(false);
         warningObject.SetActive(false);
-
     }
 
 
     public void OpenFile()
     {
-      
         if(fileType == FileType.LOCK && isLock)
         {
             warningObject.transform.SetParent(transform.parent.parent.parent, false);
             warningObject.transform.localPosition = new Vector3 (0.0f, warningObject.transform.localPosition.y, warningObject.transform.localPosition.z);
             warningObject.SetActive(true);
             StartCoroutine("closeWarning");
+
+            if(fileName == "DOSSIER 2")
+                ClientManager.instance.SendMessage(11);
+
+            if (fileName == "DOSSIER 3")
+                ClientManager.instance.SendMessage(12);
         }
         if (fileType == FileType.SUCCESS   && isLock)
         {
@@ -72,6 +76,7 @@ public class FileButtonManager : MonoBehaviour
         listIndex = index;
         imageObject.GetComponent<Image>().sprite = image;
         fileNameObject.GetComponent<TMP_Text>().text = name;
+        fileName = name;
         fileType = type;
         passwordText = password;
     }
@@ -86,7 +91,6 @@ public class FileButtonManager : MonoBehaviour
 
     IEnumerator closeWarning()
     {
-
         yield return new WaitForSeconds(1.0f);
         warningObject.SetActive(false);
     }

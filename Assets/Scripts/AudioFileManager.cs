@@ -21,7 +21,10 @@ public class AudioFileManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            Close();
+        }
     }
     public void Close()
     {
@@ -45,4 +48,5 @@ public class AudioFileManager : MonoBehaviour
     {
         ClientManager.instance.SendMessage(idToSend);
     }
+
 }
