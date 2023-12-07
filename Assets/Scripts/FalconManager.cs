@@ -19,7 +19,7 @@ public class FalconManager : MonoBehaviour
     {
         popup.SetActive(false);
         lightMeshRenderer = Light_01.GetComponent<MeshRenderer>();
-        FalconIsFinish();
+        RestartFalcon();
 
     }
 

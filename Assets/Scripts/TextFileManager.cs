@@ -8,6 +8,9 @@ public class TextFileManager : MonoBehaviour
     // Start is called before the first frame update
     public TMP_Text fileName;
     public TMP_Text fileContent;
+    public GameObject toSend;
+    public bool isSendable;
+    public int idToSend;
 
     void Start()
     {
@@ -23,15 +26,22 @@ public class TextFileManager : MonoBehaviour
         }
     }
 
-    public void SetParameters(string name, string content)
+    public void SetParameters(string name, string content, int id, bool sendable)
     {
         fileContent.text = content;
         fileName.text = name;
+        idToSend = id;
+        isSendable = sendable;
+        toSend.SetActive(isSendable);
     }
 
     public void Close()
     {
         WindowManager.instance.GoBack();
+    }
+    public void sendId()
+    {
+        ClientManager.instance.SendMessage(idToSend);
     }
 }
 

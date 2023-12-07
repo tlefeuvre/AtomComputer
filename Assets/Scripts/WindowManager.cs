@@ -77,8 +77,7 @@ public class WindowManager : MonoBehaviour
         /* Instantiates file childs */
         int id = arborescence.Count - 1;
 
-        if(arborescence[id].unlockAll == true)
-            allUnlocked = true;
+
 
         if (arborescence[id].type == FileType.FOLDER || arborescence[id].type == FileType.LOCK)
         {
@@ -86,9 +85,9 @@ public class WindowManager : MonoBehaviour
             depthPrefab.SetActive(true );
             for (int i = 0; i < arborescence[id].childs.Count; i++)
             {
-                if (allUnlocked && arborescence[id].childs[i].canBeUnlock && arborescence[id].childs[i].type == FileType.LOCK)
+                if (allUnlocked && arborescence[id].childs[i].isLock && arborescence[id].childs[i].type == FileType.LOCK)
                     arborescence[id].childs[i].type = FileType.FOLDER;
-                else if(!allUnlocked && arborescence[id].childs[i].canBeUnlock && arborescence[id].childs[i].type == FileType.FOLDER)
+                else if(!allUnlocked && arborescence[id].childs[i].isLock && arborescence[id].childs[i].type == FileType.FOLDER)
                     arborescence[id].childs[i].type = FileType.LOCK;
 
 
@@ -101,7 +100,7 @@ public class WindowManager : MonoBehaviour
             backButton.SetActive(false);
             depthPrefab.SetActive(false);
 
-            OpenTextFile(arborescence[id].textFileName, arborescence[id].textContent);
+            OpenTextFile(arborescence[id].textFileName, arborescence[id].textContent, arborescence[id].idToSend, arborescence[id].sendable);
         }
 
         else if (arborescence[id].type == FileType.AUDIO)
@@ -109,7 +108,7 @@ public class WindowManager : MonoBehaviour
             backButton.SetActive(false);
             depthPrefab.SetActive(false);
 
-            OpenAudioFile(arborescence[id].audioContent, arborescence[id].textFileName);
+            OpenAudioFile(arborescence[id].audioContent, arborescence[id].textFileName, arborescence[id].idToSend, arborescence[id].sendable);
         }
         else if (arborescence[id].type == FileType.IMAGE)
         {
@@ -131,7 +130,7 @@ public class WindowManager : MonoBehaviour
     }
 
     /* Display text content of a text file*/
-    private void OpenTextFile(string fileName, string textContent)
+    private void OpenTextFile(string fileName, string textContent, int id, bool sendable)
     {
         GetComponent<GridLayoutGroup>().enabled = false;
 
@@ -143,12 +142,12 @@ public class WindowManager : MonoBehaviour
         newFile.GetComponent<RectTransform>().anchoredPosition = new Vector2(-1 * transform.GetComponent<RectTransform>().anchoredPosition.x, 0);
         newFile.transform.localPosition = new Vector3(newFile.transform.localPosition.x, newFile.transform.localPosition.y, 0);
 
-        newFile.GetComponent<TextFileManager>().SetParameters(fileName, textContent);
+        newFile.GetComponent<TextFileManager>().SetParameters(fileName, textContent,id,sendable);
         //newFile.GetComponentInChildren<TMP_Text>().text = textContent;
     }
 
     /* Play audio clip of audio file */
-    private void OpenAudioFile(AudioClip audioClip, string fileName)
+    private void OpenAudioFile(AudioClip audioClip, string fileName, int id, bool sendable)
     {
         GetComponent<GridLayoutGroup>().enabled = false;
 
@@ -162,7 +161,7 @@ public class WindowManager : MonoBehaviour
 
         float clipLenght = audioClip.length;
         
-        newFile.GetComponent<AudioFileManager>().SetParameters(fileName, clipLenght, audioClip);
+        newFile.GetComponent<AudioFileManager>().SetParameters(fileName, clipLenght, audioClip,id,sendable);
 
 
         audioSource.clip = audioClip;

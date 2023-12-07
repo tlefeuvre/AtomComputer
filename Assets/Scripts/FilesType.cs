@@ -21,8 +21,10 @@ public class FileTemplate
     public string textContent;
     public string password;
     public int depthIndex;
-    public bool canBeUnlock;
-    public bool unlockAll;
+    public bool isLock;
+
+    public int idToSend;
+    public bool sendable;
     public AudioClip audioContent;
     public Sprite imageContent;
     public FileType type;

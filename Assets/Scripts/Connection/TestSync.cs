@@ -14,6 +14,7 @@ public class TestSync : MonoBehaviour
     private Image feedback;
 
     public UnityEvent FalconDone;
+    public UnityEvent GetFolderUnlock;
 
 
     private void OnEnable()
@@ -46,7 +47,22 @@ public class TestSync : MonoBehaviour
             case 2:
                 //feedback.color = Color.yellow;
                 //feedbackText.text = "2";
+                ModifyScriptable.instance.GetUnlockFolderName("DOSSIER 1");
                 break;
+        }
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyUp(KeyCode.J))
+        {
+            ModifyScriptable.instance.GetUnlockFolderName("DOSSIER 2");
+
+        }
+        if (Input.GetKeyUp(KeyCode.K))
+        {
+            ModifyScriptable.instance.GetUnlockFolderName("DOSSIER 3");
+
         }
     }
 }

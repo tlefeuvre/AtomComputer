@@ -36,7 +36,7 @@ public class FileButtonManager : MonoBehaviour
             warningObject.transform.SetParent(transform.parent.parent.parent, false);
             warningObject.transform.localPosition = new Vector3 (0.0f, warningObject.transform.localPosition.y, warningObject.transform.localPosition.z);
             warningObject.SetActive(true);
-            StartCoroutine("closeWwarning");
+            StartCoroutine("closeWarning");
         }
         if (fileType == FileType.SUCCESS   && isLock)
         {
@@ -84,7 +84,7 @@ public class FileButtonManager : MonoBehaviour
         passwordObject.SetActive(false);
     }
 
-    IEnumerator closeWwarning()
+    IEnumerator closeWarning()
     {
 
         yield return new WaitForSeconds(1.0f);

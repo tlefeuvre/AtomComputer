@@ -18,33 +18,36 @@ MonoBehaviour:
     textContent: 
     password: 
     depthIndex: 1
-    canBeUnlock: 0
-    unlockAll: 0
+    isLock: 0
+    idToSend: 0
+    sendable: 0
     audioContent: {fileID: 0}
     imageContent: {fileID: 0}
     type: 0
     childs:
-    - name: Folder 2
+    - name: DOSSIER 2
       textFileName: 
       textContent: 
       password: mdp1
       depthIndex: 2
-      canBeUnlock: 1
-      unlockAll: 0
+      isLock: 1
+      idToSend: 0
+      sendable: 0
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
-      type: 0
+      type: 3
       childs:
-      - name: Folder 3
+      - name: DOSSIER 3
         textFileName: 
         textContent: 
         password: mdp2
         depthIndex: 3
-        canBeUnlock: 0
-        unlockAll: 0
+        isLock: 1
+        idToSend: 0
+        sendable: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 0}
-        type: 0
+        type: 3
         childs:
         - name: logs.txt
           textFileName: logs.txt
@@ -74,8 +77,9 @@ MonoBehaviour:
             me suis amus\xE9 \xE0 le dessiner en reliant les jours du calendrier.  "
           password: 
           depthIndex: 0
-          canBeUnlock: 0
-          unlockAll: 0
+          isLock: 0
+          idToSend: 5
+          sendable: 1
           audioContent: {fileID: 0}
           imageContent: {fileID: 0}
           type: 1
@@ -85,33 +89,10 @@ MonoBehaviour:
           textContent: 
           password: 
           depthIndex: 0
-          canBeUnlock: 0
-          unlockAll: 0
+          isLock: 0
+          idToSend: 8
+          sendable: 1
           audioContent: {fileID: 8300000, guid: 81b9ce1ab2be7c74cae41784d24f5bfb,
-            type: 3}
-          imageContent: {fileID: 0}
-          type: 2
-          childs: []
-        - name: AUDIO_4.MP3
-          textFileName: Enregistrement 4
-          textContent: 
-          password: 
-          depthIndex: 0
-          canBeUnlock: 0
-          unlockAll: 0
-          audioContent: {fileID: 8300000, guid: d1addf461f12cc747b03c2426a13b861,
-            type: 3}
-          imageContent: {fileID: 0}
-          type: 2
-          childs: []
-        - name: AUDIO_5.MP3
-          textFileName: 'Enregistrement 5 '
-          textContent: 
-          password: 
-          depthIndex: 0
-          canBeUnlock: 0
-          unlockAll: 0
-          audioContent: {fileID: 8300000, guid: 3bec44942277af142882f9e82a4fbfd2,
             type: 3}
           imageContent: {fileID: 0}
           type: 2
@@ -121,8 +102,9 @@ MonoBehaviour:
         textContent: 
         password: 
         depthIndex: 0
-        canBeUnlock: 0
-        unlockAll: 0
+        isLock: 0
+        idToSend: 6
+        sendable: 1
         audioContent: {fileID: 8300000, guid: e9ee9328b13251c4db55ecb5f619fc7a, type: 3}
         imageContent: {fileID: 0}
         type: 2
@@ -132,78 +114,13 @@ MonoBehaviour:
         textContent: 
         password: 
         depthIndex: 0
-        canBeUnlock: 0
-        unlockAll: 0
+        isLock: 0
+        idToSend: 7
+        sendable: 1
         audioContent: {fileID: 8300000, guid: 6b462b5890bd4894e8ceada2cafd71b4, type: 3}
         imageContent: {fileID: 0}
         type: 2
         childs: []
-      - name: Folder 4
-        textFileName: 
-        textContent: 
-        password: mdp3
-        depthIndex: 4
-        canBeUnlock: 0
-        unlockAll: 0
-        audioContent: {fileID: 0}
-        imageContent: {fileID: 0}
-        type: 0
-        childs:
-        - name: AUDIO_6.MP3
-          textFileName: Enregistrement 6
-          textContent: 
-          password: 
-          depthIndex: 0
-          canBeUnlock: 0
-          unlockAll: 0
-          audioContent: {fileID: 8300000, guid: 3bec44942277af142882f9e82a4fbfd2,
-            type: 3}
-          imageContent: {fileID: 0}
-          type: 2
-          childs: []
-        - name: logs.txt
-          textFileName: logs.txt
-          textContent: "Log - Jour 225 : Je n\u2019ai pas ferm\xE9 l'\u0153il depuis
-            des jours. L\u2019aboutissement imminent de mes recherches m\u2019obs\xE8dent
-            et le son de la t\xE9l\xE9vision me garde \xE9veill\xE9. Ce soir c\u2019est
-            le grand soir. Je vais pouvoir me transf\xE9rer dans mon poste de t\xE9l\xE9vision.
-            Rebecca\u2026.Rebecca je te rejoins.  Log - Jour \u221A\u2569o\u0C94\u03A8\u0B92#
-            bis: Rebecca. Rebecca. RebeccaRebecca. Rebecca. RebeccaRebecca. Rebecca.
-            RebeccaRebecca. Rebecca. RebeccaRebecca. Rebecca. RebeccaRebecca. Rebecca.
-            Rebecca\u2026\u2026.Rebecca\u2026.Rebecca.Rebecca. Rebecca\u2026\u2026.Rebecca\u2026.Rebecca.
-            Rebecca\u2026becca.becca.becca  -Fin des entr\xE9es du journal de bord"
-          password: 
-          depthIndex: 0
-          canBeUnlock: 0
-          unlockAll: 0
-          audioContent: {fileID: 0}
-          imageContent: {fileID: 0}
-          type: 1
-          childs: []
-        - name: AUDIO_7.MP3
-          textFileName: Enregistrement 7
-          textContent: 
-          password: 
-          depthIndex: 0
-          canBeUnlock: 0
-          unlockAll: 0
-          audioContent: {fileID: 8300000, guid: ed164cef2d7a19b4abc7364e1ac303da,
-            type: 3}
-          imageContent: {fileID: 0}
-          type: 2
-          childs: []
-        - name: AUDIO_8.MP3
-          textFileName: Enregistrement 8
-          textContent: 
-          password: 
-          depthIndex: 0
-          canBeUnlock: 0
-          unlockAll: 0
-          audioContent: {fileID: 8300000, guid: c122885265445bf40acc1110ae29f827,
-            type: 3}
-          imageContent: {fileID: 0}
-          type: 2
-          childs: []
       - name: logs.txt
         textFileName: logs.txt
         textContent: "Log- Jour 60 : La guerre qui fait rage \xE0 l'ext\xE9rieur
@@ -238,37 +155,16 @@ MonoBehaviour:
           fractur\xE9e."
         password: 
         depthIndex: 0
-        canBeUnlock: 0
-        unlockAll: 0
+        isLock: 0
+        idToSend: 4
+        sendable: 1
         audioContent: {fileID: 0}
         imageContent: {fileID: 0}
         type: 1
         childs: []
     - name: logs.txt
       textFileName: logs.txt
-      textContent: "Log - Jour 1 :  Les tensions entre pays s\u2019intensifient de
-        jour en jour et la menace d\u2019une guerre est maintenant r\xE9elle, j\u2019ai
-        commenc\xE9 \xE0 \xE9quiper mon appartement de syst\xE8me de s\xE9curit\xE9
-        et j\u2019ai renforc\xE9 les murs. Aujourd'hui, j'ai commenc\xE9 les premi\xE8res
-        exp\xE9rimentations pour transf\xE9rer la conscience humaine au niveau subatomique
-        dans un support num\xE9rique. La technologie est rudimentaire, mais l'espoir
-        de quitter ce cauchemar apocalyptique me pousse \xE0 pers\xE9v\xE9rer                                                     
-        Log - Jour 6 :  Nous y voil\xE0, ce matin l\u2019\xE9tat d\u2019urgence a
-        \xE9t\xE9 d\xE9clar\xE9. J\u2019ai \xE9t\xE9 contr\xF4l\xE9 en me rendant
-        au laboratoire o\xF9 je travaille ce matin.  J\u2019ai profit\xE9 de mon
-        temps libre pour mes exp\xE9rimentations. Je pense avoir opt\xE9 pour une
-        approche prometteuse, mais impossible d\u2019obtenir de l\u2019aide, mes
-        coll\xE8gues ne semblent pas comprendre l'int\xE9r\xEAt de mes recherches.                                          
-        Log - Jour 18 :  La guerre atomique fait rage dans le pays, chaque explosion
-        secoue le sol, et le ciel est constamment embras\xE9. Mon appartement souterrain
-        est devenu mon refuge, un sanctuaire vou\xE9 \xE0 ma recherche de l'immortalit\xE9
-        num\xE9rique. Je ne vais presque plus au laboratoire pour travailler mais
-        cel\xE0 en vaut la peine, chaque avanc\xE9e me rapproche de mon objectif
-        ultime : l'\xE9vasion num\xE9rique. Pour des raisons de s\xE9curit\xE9 j\u2019ai
-        crypt\xE9 le mot de passe de lancement de mon programme. Les quatres caract\xE8res
-        du code sont associ\xE9s \xE0 des symboles dessin\xE9s dans mon appartement.
-        J\u2019ai dessin\xE9 le code sur les murs car ma m\xE9moire me joue des tours,  
-        Log - Jour 37 :  Isolation totale. Les communications avec l'ext\xE9rieur
+      textContent: "Log - Jour 37 :  Isolation totale. Les communications avec l'ext\xE9rieur
         ont \xE9t\xE9 coup\xE9es depuis quelques jours. Mes exp\xE9riences progressent
         lentement, mais j\u2019ai de bons espoirs. Je ne vois plus personnes, m\xEAme
         mes coll\xE8gues, de toute fa\xE7on ils ne peuvent pas comprendre. Dans toute
@@ -278,8 +174,9 @@ MonoBehaviour:
         grav\xE9 sur la porte de l\u2019appartement juste sous l\u2019\xE9coutille.\L\L"
       password: 
       depthIndex: 0
-      canBeUnlock: 0
-      unlockAll: 1
+      isLock: 0
+      idToSend: 3
+      sendable: 1
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
       type: 1
@@ -289,65 +186,59 @@ MonoBehaviour:
       textContent: 
       password: 
       depthIndex: 0
-      canBeUnlock: 0
-      unlockAll: 0
+      isLock: 0
+      idToSend: 0
+      sendable: 0
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
       type: 0
       childs:
-      - name: CODES_01.PNG
-        textFileName: CODES_01.PNG
+      - name: NIVEAU_01.PNG
+        textFileName: NIVEAU_01.PNG
         textContent: 
         password: 
         depthIndex: 0
-        canBeUnlock: 0
-        unlockAll: 0
+        isLock: 0
+        idToSend: 0
+        sendable: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 21300000, guid: db2666b79271b2b49952007e702d1fac, type: 3}
         type: 4
         childs: []
-      - name: CODES_02.PNG
-        textFileName: CODES_02.PNG
+      - name: NIVEAU_02.PNG
+        textFileName: NIVEAU_02.PNG
         textContent: 
         password: 
         depthIndex: 0
-        canBeUnlock: 0
-        unlockAll: 0
+        isLock: 0
+        idToSend: 0
+        sendable: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 21300000, guid: 04fd00a841e61f4458216e7bb5996be9, type: 3}
         type: 4
         childs: []
-      - name: CODES_03.PNG
-        textFileName: CODES_03.PNG
+      - name: NIVEAU_03.PNG
+        textFileName: NIVEAU_03.PNG
         textContent: 
         password: 
         depthIndex: 0
-        canBeUnlock: 0
-        unlockAll: 0
+        isLock: 0
+        idToSend: 0
+        sendable: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 21300000, guid: 168c42afc9ae29f4cb69d275ac363a3e, type: 3}
         type: 4
         childs: []
-      - name: CODES_04.PNG
-        textFileName: CODES_04.PNG
+      - name: COMMENT JOUER
+        textFileName: COMMENT JOUER
         textContent: 
         password: 
         depthIndex: 0
-        canBeUnlock: 0
-        unlockAll: 0
+        isLock: 0
+        idToSend: 0
+        sendable: 0
         audioContent: {fileID: 0}
-        imageContent: {fileID: 21300000, guid: c8d2e5c4ecd01bd4d8c53a39da31acec, type: 3}
-        type: 4
-        childs: []
-      - name: HOW TO PLAY
-        textFileName: HOW TO PLAY
-        textContent: 
-        password: 
-        depthIndex: 0
-        canBeUnlock: 0
-        unlockAll: 0
-        audioContent: {fileID: 0}
-        imageContent: {fileID: 21300000, guid: 8e370959482badb43a35bc116a6b67ab, type: 3}
+        imageContent: {fileID: 21300000, guid: 3c3c9ef0dc084ef4194bf64cea617579, type: 3}
         type: 4
         childs: []
     - name: .EXE
@@ -355,8 +246,9 @@ MonoBehaviour:
       textContent: 
       password: CHO7
       depthIndex: 0
-      canBeUnlock: 0
-      unlockAll: 0
+      isLock: 0
+      idToSend: 0
+      sendable: 0
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
       type: 5
