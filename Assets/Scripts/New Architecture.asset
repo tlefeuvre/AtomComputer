@@ -30,12 +30,12 @@ MonoBehaviour:
       textContent: 
       password: mdp1
       depthIndex: 2
-      isLock: 0
+      isLock: 1
       idToSend: 0
       sendable: 0
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
-      type: 0
+      type: 3
       childs:
       - name: DOSSIER 3
         textFileName: 
@@ -74,7 +74,9 @@ MonoBehaviour:
             paix tous les deux. Oui, la prochaine version de mon programme sera la
             bonne, ma ch\xE8re Rebecca. Je te le promets. J\u2019y pense mais je
             ne t\u2019ai pas parl\xE9 du troisi\xE8me symbole du mot de passe ? Je
-            me suis amus\xE9 \xE0 le dessiner en reliant les jours du calendrier.  "
+            me suis amus\xE9 \xE0 le dessiner en reliant \u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439!
+            \u0416\u0435\u043B\u0430\u044E \u0442\u0435\u0431\u0435 \u043F\u0440\u0435\u043A\u0440\u0430\u0441\u043D\u043E\u0433\u043E
+            \u0434\u043D\u044F \u0438 \u0432\u0434\u043E\u0445\u043D\u043E\u0432\u0435\u043D\u0438\u044F!"
           password: 
           depthIndex: 0
           isLock: 0
@@ -90,7 +92,7 @@ MonoBehaviour:
           password: 
           depthIndex: 0
           isLock: 0
-          idToSend: 15
+          idToSend: 0
           sendable: 0
           audioContent: {fileID: 8300000, guid: 81b9ce1ab2be7c74cae41784d24f5bfb,
             type: 3}
@@ -115,9 +117,9 @@ MonoBehaviour:
         password: 
         depthIndex: 0
         isLock: 0
-        idToSend: 14
+        idToSend: 13
         sendable: 1
-        audioContent: {fileID: 8300000, guid: 6b462b5890bd4894e8ceada2cafd71b4, type: 3}
+        audioContent: {fileID: 8300000, guid: bc06616d88bff4b4684de8b6e6378c1c, type: 3}
         imageContent: {fileID: 0}
         type: 2
         childs: []
@@ -171,11 +173,14 @@ MonoBehaviour:
         cette noirceur j\u2019ai fais la rencontre d\u2019une jeune femme : Rebecca.
         Son sourire a illumin\xE9 mon c\u0153ur \xE0 travers la noirceur des volutes
         atomiques.  J\u2019ai mis en place mon mot de passe, le premier symbole est
-        grav\xE9 sur la porte de l\u2019appartement juste sous l\u2019\xE9coutille.\L\L"
+        grav\xE9 sur \u0415\u0441\u043B\u0438 \u0443 \u0442\u0435\u0431\u044F \u0435\u0441\u0442\u044C
+        \u0447\u0435\u043C \u043F\u043E\u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F
+        \u0438\u043B\u0438 \u0447\u0442\u043E \u043E\u0431\u0441\u0443\u0434\u0438\u0442\u044C,
+        \u044F \u0433\u043E\u0442\u043E\u0432 \u043F\u0440\u0438\u0441\u043B\u0443\u0448\u0430\u0442\u044C\u0441\u044F. "
       password: 
       depthIndex: 0
       isLock: 0
-      idToSend: 13
+      idToSend: 10
       sendable: 1
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
@@ -244,7 +249,7 @@ MonoBehaviour:
     - name: .EXE
       textFileName: .EXE
       textContent: 
-      password: CHO7
+      password: CHO
       depthIndex: 0
       isLock: 0
       idToSend: 0

@@ -22,9 +22,12 @@ public class ClientManager : MonoBehaviour
     public GameObject textip;
     public GameObject textport;
 
+    private bool send;
     // Start is called before the first frame update
     void Start()
     {
+        send = false;
+
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         instance = this;
         mySocket = new TcpClient();
@@ -46,6 +49,12 @@ public class ClientManager : MonoBehaviour
         }
         else
         {
+            if (!send)
+            {
+                send = true;
+                ClientManager.instance.SendMessage(10);
+
+            }
             buttonconnect.SetActive(false);
             textip.SetActive(false);
             textport.SetActive(false);

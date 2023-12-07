@@ -13,6 +13,9 @@ public class AudioFileManager : MonoBehaviour
     public GameObject toSend;
     public bool isSendable;
     public int idToSend;
+
+    public GameObject sentPopup;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +49,17 @@ public class AudioFileManager : MonoBehaviour
 
     public void sendId()
     {
+        sentPopup.SetActive(true);
+        StartCoroutine("desactivatepopup");
+
         ClientManager.instance.SendMessage(idToSend);
+
+
+    }
+    IEnumerator desactivatepopup()
+    {
+        yield return new WaitForSeconds(1);
+        sentPopup.SetActive(false);
     }
 
 }

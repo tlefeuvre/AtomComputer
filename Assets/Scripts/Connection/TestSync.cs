@@ -49,10 +49,10 @@ public class TestSync : MonoBehaviour
                 //feedback.color = Color.yellow;
                 //feedbackText.text = "2";
                 break;
-            case 11:
+            case 12:
                 GetFolder2.Invoke();
                 break;
-            case 12:
+            case 14:
                 GetFolder3.Invoke();
 
                 break;

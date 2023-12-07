@@ -17,6 +17,7 @@ public class FalconManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         popup.SetActive(false);
         lightMeshRenderer = Light_01.GetComponent<MeshRenderer>();
         RestartFalcon();

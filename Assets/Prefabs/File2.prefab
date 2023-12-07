@@ -759,6 +759,7 @@ MonoBehaviour:
   passwordObject: {fileID: 2779410176780192953}
   warningObject: {fileID: 3707946793871136088}
   imageObject: {fileID: 6530106537484052519}
+  fileName: 
 --- !u!1 &3707946793871136088
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,7 +2002,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "CHIFFR\xC9\nAu tour de votre co\xE9quipier"
+  m_text: "CHIFFR\xC9\nAu tour de votre partenaire"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f7af0572e039326449da1e379b30858b, type: 2}
   m_sharedMaterial: {fileID: -260516376849091702, guid: f7af0572e039326449da1e379b30858b,

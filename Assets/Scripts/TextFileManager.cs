@@ -12,9 +12,12 @@ public class TextFileManager : MonoBehaviour
     public bool isSendable;
     public int idToSend;
 
+    public GameObject sentPopup;
+
     void Start()
     {
-        
+        sentPopup.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -41,7 +44,15 @@ public class TextFileManager : MonoBehaviour
     }
     public void sendId()
     {
+        sentPopup.SetActive(true);
+        StartCoroutine("desactivatepopup");
         ClientManager.instance.SendMessage(idToSend);
+    }
+
+    IEnumerator desactivatepopup()
+    {
+        yield return new WaitForSeconds(1);
+        sentPopup.SetActive(false);
     }
  
 }

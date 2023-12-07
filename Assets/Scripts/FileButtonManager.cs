@@ -37,10 +37,10 @@ public class FileButtonManager : MonoBehaviour
             StartCoroutine("closeWarning");
 
             if(fileName == "DOSSIER 2")
-                ClientManager.instance.SendMessage(11);
+                ClientManager.instance.SendMessage(12);
 
             if (fileName == "DOSSIER 3")
-                ClientManager.instance.SendMessage(12);
+                ClientManager.instance.SendMessage(14);
         }
         if (fileType == FileType.SUCCESS   && isLock)
         {
