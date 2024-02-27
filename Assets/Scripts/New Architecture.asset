@@ -166,15 +166,15 @@ MonoBehaviour:
         childs: []
     - name: logs.txt
       textFileName: logs.txt
-      textContent: "Log - Jour 37 :  Isolation totale. Les communications avec l'ext\xE9rieur
+      textContent: "Log - Jour 37 :   Isolation totale. Les communications avec l'ext\xE9rieur
         ont \xE9t\xE9 coup\xE9es depuis quelques jours. Mes exp\xE9riences progressent
         lentement, mais j\u2019ai de bons espoirs. Je ne vois plus personnes, m\xEAme
         mes coll\xE8gues, de toute fa\xE7on ils ne peuvent pas comprendre. Dans toute
         cette noirceur j\u2019ai fais la rencontre d\u2019une jeune femme : Rebecca.
         Son sourire a illumin\xE9 mon c\u0153ur \xE0 travers la noirceur des volutes
-        atomiques.  J\u2019ai mis en place mon mot de passe, le premier symbole est
-        grav\xE9 sur \u0415\u0441\u043B\u0438 \u0443 \u0442\u0435\u0431\u044F \u0435\u0441\u0442\u044C
-        \u0447\u0435\u043C \u043F\u043E\u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F
+        atomiques. <b><color=\"red\">  J\u2019ai mis en place mon mot de passe, le
+        premier symbole est grav\xE9 sur </b></color>\u0415\u0441\u043B\u0438 \u0443
+        \u0442\u0435\u0431\u044F \u0435\u0441\u0442\u044C \u0447\u0435\u043C \u043F\u043E\u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F
         \u0438\u043B\u0438 \u0447\u0442\u043E \u043E\u0431\u0441\u0443\u0434\u0438\u0442\u044C,
         \u044F \u0433\u043E\u0442\u043E\u0432 \u043F\u0440\u0438\u0441\u043B\u0443\u0448\u0430\u0442\u044C\u0441\u044F. "
       password: 

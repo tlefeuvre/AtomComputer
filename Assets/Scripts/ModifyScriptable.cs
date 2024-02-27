@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ModifyScriptable : MonoBehaviour
 {
+
     public List<string> foldersNames;
     public Architecture architecture;
 
