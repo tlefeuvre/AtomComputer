@@ -2617,6 +2617,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -20
       objectReference: {fileID: 0}
+    - target: {fileID: 3923790093853689656, guid: c7d2774fcf01dbe4895f6e3c0b0d1f77,
+        type: 3}
+      propertyPath: m_text
+      value: LOCKED FOLDER
+      objectReference: {fileID: 0}
     - target: {fileID: 4000209052314046279, guid: c7d2774fcf01dbe4895f6e3c0b0d1f77,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3151,6 +3156,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -100.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579785839462234913, guid: 437fdaf397a69494aa82287618a597e6,
+        type: 3}
+      propertyPath: m_text
+      value: LOCKED FOLDER
       objectReference: {fileID: 0}
     - target: {fileID: 4056601879448520663, guid: 437fdaf397a69494aa82287618a597e6,
         type: 3}

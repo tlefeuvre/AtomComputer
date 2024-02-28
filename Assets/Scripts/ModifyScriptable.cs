@@ -73,7 +73,7 @@ public class ModifyScriptable : MonoBehaviour
     {
         Debug.Log("GetUnlockFolderName: " + folderName);
         UnlockFolder(architecture.filesList[0], folderName);
-        unlockPopupText.text = folderName + " ouvert";
+        unlockPopupText.text = folderName + " OPEN";
         unlockPopup.SetActive(true);
         StartCoroutine("closeUnlockPopup");
     }
