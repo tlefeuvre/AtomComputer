@@ -17,7 +17,6 @@ public class DraggablePoint : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("OnBeginDrag");
         parentAfterDrag = transform.parent;
         transform.SetParent(transform.root.GetChild(0));
         transform.SetAsLastSibling();
@@ -28,7 +27,6 @@ public class DraggablePoint : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("OnDrag");
         if (customCursor)
         {
             Vector3 newPos = customCursor.transform.localPosition;
@@ -39,7 +37,6 @@ public class DraggablePoint : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("OnEndDrag");
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
 

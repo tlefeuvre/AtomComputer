@@ -59,7 +59,10 @@ public class WindowManager : MonoBehaviour
         audioSource.clip = onStartAudio;
         audioSource.Play();
     }
-
+    private void Update()
+    {
+        transform.SetAsFirstSibling();
+    }
     public void NewWindow()
     {
         audioSource.clip = clickAudio;
