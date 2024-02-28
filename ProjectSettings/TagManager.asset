@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - FilesManager
+  - Cursor
   layers:
   - Default
   - TransparentFX
