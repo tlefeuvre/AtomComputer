@@ -2435,7 +2435,7 @@ GameObject:
   - component: {fileID: 651217632}
   - component: {fileID: 651217631}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: RayCastCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3879,8 +3879,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foldersNames:
+  - DOSSIER 1
   - DOSSIER 2
-  - DOSSIER 3
   architecture: {fileID: 11400000, guid: ea999f42ed8a52548a2ade9977a77b02, type: 2}
   filesToRead: []
   unlockPopup: {fileID: 1500424413}

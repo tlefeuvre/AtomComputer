@@ -65,15 +65,30 @@ public class SecondMiniGameManager : MonoBehaviour
     public bool CheckOrder()
     {
         bool isOk = true;
+        bool isRegularOrder = true;
+
+        if (GameObject.ReferenceEquals(correctOrder[0].transform.GetChild(0).gameObject, UIPoints[0]))
+            isRegularOrder = true;
+
+        else if (GameObject.ReferenceEquals(correctOrder[0].transform.GetChild(0).gameObject, UIPoints[UIPoints.Count - 1]))
+            isRegularOrder = false;
+        else
+            return false;
+
         for (int i =0;i< correctOrder.Count;i++)
         {
             if (correctOrder[i].transform.childCount <= 0)
                 return false;
 
-           
-            if (! GameObject.ReferenceEquals(correctOrder[i].transform.GetChild(0).gameObject, UIPoints[i]) && !GameObject.ReferenceEquals(correctOrder[i].transform.GetChild(0).gameObject, UIPoints[UIPoints.Count-1-i]))
+            if (isRegularOrder)
             {
-                isOk = false;
+                if (!GameObject.ReferenceEquals(correctOrder[i].transform.GetChild(0).gameObject, UIPoints[i]))
+                    isOk = false;
+            }
+            else
+            {
+                if(!GameObject.ReferenceEquals(correctOrder[i].transform.GetChild(0).gameObject, UIPoints[UIPoints.Count - 1 - i]))
+                    isOk = false;
             }
         }
 
