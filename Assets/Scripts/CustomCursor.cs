@@ -29,6 +29,7 @@ public class CustomCursor : MonoBehaviour
             Vector3 newPos = hit.point * 102.4f;
             newPos.z = 0;
             cursor.transform.localPosition = newPos;
+            Debug.Log(newPos);
 
 
         }

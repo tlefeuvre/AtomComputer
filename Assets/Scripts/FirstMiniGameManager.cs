@@ -74,7 +74,7 @@ public class FirstMiniGameManager : MonoBehaviour
     IEnumerator ChangeColor(GameObject button)
     {
         button.GetComponent < Image >().color = Color.red;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(.5f);
         button.GetComponent<Image>().color = Color.white;
 
     }

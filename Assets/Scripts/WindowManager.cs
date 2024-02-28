@@ -84,7 +84,7 @@ public class WindowManager : MonoBehaviour
 
         if (arborescence[id].type == FileType.FOLDER || arborescence[id].type == FileType.LOCK)
         {
-            backButton.SetActive(true);
+            //backButton.SetActive(true);
             depthPrefab.SetActive(true );
             for (int i = 0; i < arborescence[id].childs.Count; i++)
             {
