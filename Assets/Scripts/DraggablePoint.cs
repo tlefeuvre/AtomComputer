@@ -6,10 +6,12 @@ using UnityEngine.UI;
 
 public class DraggablePoint : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    public GameObject customCursor;
+    private GameObject customCursor;
     public Transform parentAfterDrag;
 
     private Image image;
+
+    public string type;
     private void Start()
     {
         customCursor = GameObject.FindGameObjectWithTag("Cursor");

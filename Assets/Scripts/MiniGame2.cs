@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.WSA;
 
-public class SecondMiniGameManager : MonoBehaviour
+public class MiniGame2 : MonoBehaviour
 {
     public LineRenderer lineRenderer;
     public List<GameObject> UIPoints = new List<GameObject>();

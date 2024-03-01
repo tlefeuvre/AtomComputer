@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FirstMiniGameManager : MonoBehaviour
+public class MiniGame1 : MonoBehaviour
 {
     private int nbRow = 3;
     private int nbCol = 6;
 
-    public List<GameObject> gameObjects = new List<GameObject>();
+    private List<GameObject> gameObjects = new List<GameObject>();
     private GameObject PressedButton;
     // Start is called before the first frame update
     void Start()

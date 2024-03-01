@@ -15,6 +15,8 @@ public class FileButtonManager : MonoBehaviour
 
     public GameObject miniGame1;
     public GameObject miniGame2;
+    public GameObject miniGame3;
+    public GameObject miniGame4;
     public int listIndex;
     private string passwordText;
     private FileType fileType;
@@ -53,6 +55,24 @@ public class FileButtonManager : MonoBehaviour
                 miniGame2.transform.SetParent(transform.parent.parent, false);
                 miniGame2.transform.localPosition = new Vector3(0, 100, 0);
                 miniGame2.SetActive(true);
+
+            }
+            if (fileName == ModifyScriptable.instance.foldersNames[2])
+            {
+                Debug.Log("set active mini game " + isLock);
+
+                miniGame3.transform.SetParent(transform.parent.parent, false);
+                miniGame3.transform.localPosition = new Vector3(0, 100, 0);
+                miniGame3.SetActive(true);
+
+            }
+            if (fileName == ModifyScriptable.instance.foldersNames[3])
+            {
+                Debug.Log("set active mini game " + isLock);
+
+                miniGame4.transform.SetParent(transform.parent.parent, false);
+                miniGame4.transform.localPosition = new Vector3(0, 100, 0);
+                miniGame4.SetActive(true);
 
             }
             /*warningObject.transform.SetParent(transform.parent.parent.parent, false);

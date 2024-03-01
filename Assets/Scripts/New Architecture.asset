@@ -30,24 +30,24 @@ MonoBehaviour:
       textContent: 
       password: mdp1
       depthIndex: 2
-      isLock: 1
+      isLock: 0
       idToSend: 0
       sendable: 0
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
-      type: 3
+      type: 0
       childs:
       - name: DOSSIER 2
         textFileName: 
         textContent: 
         password: mdp2
         depthIndex: 3
-        isLock: 1
+        isLock: 0
         idToSend: 0
         sendable: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 0}
-        type: 3
+        type: 0
         childs:
         - name: logs.txt
           textFileName: logs.txt
@@ -99,6 +99,43 @@ MonoBehaviour:
           imageContent: {fileID: 0}
           type: 2
           childs: []
+        - name: DOSSIER 3
+          textFileName: 
+          textContent: 
+          password: mdp3
+          depthIndex: 4
+          isLock: 1
+          idToSend: 0
+          sendable: 0
+          audioContent: {fileID: 8300000, guid: 81b9ce1ab2be7c74cae41784d24f5bfb,
+            type: 3}
+          imageContent: {fileID: 0}
+          type: 3
+          childs:
+          - name: Logs.txt
+            textFileName: Logs niveau 4
+            textContent: logs ssssss
+            password: 
+            depthIndex: 0
+            isLock: 0
+            idToSend: 0
+            sendable: 0
+            audioContent: {fileID: 0}
+            imageContent: {fileID: 0}
+            type: 1
+            childs: []
+          - name: DOSSIER 4
+            textFileName: Logs niveau 4
+            textContent: logs ssssss
+            password: 
+            depthIndex: 0
+            isLock: 0
+            idToSend: 0
+            sendable: 0
+            audioContent: {fileID: 0}
+            imageContent: {fileID: 0}
+            type: 3
+            childs: []
       - name: AUDIO_1.MP3
         textFileName: Enregistrement 1
         textContent: 
