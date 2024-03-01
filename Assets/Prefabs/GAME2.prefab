@@ -31,7 +31,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4502243652354134190}
+  m_Father: {fileID: 991494371654567276}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -88,8 +88,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c03eafaaba3e2040a07223ce17d0808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customCursor: {fileID: 0}
   parentAfterDrag: {fileID: 0}
+  type: 
 --- !u!1 &750909808140953120
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,8 +121,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1041813904346724703}
+  m_Children: []
   m_Father: {fileID: 4682706105433844413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -204,6 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf630a89e9700bd4d8061497492bfc1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMiniGame4: 0
 --- !u!1 &1162117056274011672
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,6 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf630a89e9700bd4d8061497492bfc1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMiniGame4: 0
 --- !u!1 &2078518993959888931
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +617,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7144735171865290233}
   m_Father: {fileID: 4682706105433844413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -698,6 +700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf630a89e9700bd4d8061497492bfc1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMiniGame4: 0
 --- !u!1 &2136965184747616909
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,6 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf630a89e9700bd4d8061497492bfc1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMiniGame4: 0
 --- !u!1 &2873949490965164100
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,7 +846,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4000209052314046279}
+  m_Father: {fileID: 1849476747013632040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -899,8 +903,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c03eafaaba3e2040a07223ce17d0808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customCursor: {fileID: 0}
   parentAfterDrag: {fileID: 0}
+  type: 
 --- !u!1 &3148081377076709659
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,7 +937,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7144735171865290233}
+  - {fileID: 2380299300446675823}
   m_Father: {fileID: 4682706105433844413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1015,6 +1019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf630a89e9700bd4d8061497492bfc1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMiniGame4: 0
 --- !u!1 &3248678310397485096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,7 +1129,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2380299300446675823}
+  - {fileID: 1041813904346724703}
   m_Father: {fileID: 4682706105433844413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1206,6 +1211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf630a89e9700bd4d8061497492bfc1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMiniGame4: 0
 --- !u!1 &4114766271051126285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,7 +1319,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2559891896016188291}
   m_Father: {fileID: 4682706105433844413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1395,6 +1402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf630a89e9700bd4d8061497492bfc1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMiniGame4: 0
 --- !u!1 &4505015937778567002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,7 +1434,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8702431341860445939}
+  m_Father: {fileID: 4000209052314046279}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1483,8 +1491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c03eafaaba3e2040a07223ce17d0808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customCursor: {fileID: 0}
   parentAfterDrag: {fileID: 0}
+  type: 
 --- !u!1 &4887178626619041778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,8 +1524,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2559891896016188291}
+  m_Children: []
   m_Father: {fileID: 4682706105433844413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1599,6 +1606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf630a89e9700bd4d8061497492bfc1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMiniGame4: 0
 --- !u!1 &5419461376172884180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,6 +1993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf630a89e9700bd4d8061497492bfc1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMiniGame4: 0
 --- !u!1 &6352810455657458619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,7 +2274,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6991682939147033887}
+  m_Father: {fileID: 8702431341860445939}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2322,8 +2331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c03eafaaba3e2040a07223ce17d0808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customCursor: {fileID: 0}
   parentAfterDrag: {fileID: 0}
+  type: 
 --- !u!1 &8669614608577082773
 GameObject:
   m_ObjectHideFlags: 0

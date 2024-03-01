@@ -36,7 +36,6 @@ public class MiniGame2 : MonoBehaviour
             isUnlocked = true;
             StartCoroutine("IsSuccess");
         }
-        Debug.Log("GAME 2: " + isOk);
     }
 
     IEnumerator IsSuccess()

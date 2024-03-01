@@ -74,7 +74,7 @@ public class WindowManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        depthPrefab.GetComponentInChildren<TMP_Text>().text ="Niveau"+'\n'+ arborescence[arborescence.Count - 1].depthIndex.ToString();
+        depthPrefab.GetComponentInChildren<TMP_Text>().text ="Level"+'\n'+ arborescence[arborescence.Count - 1].depthIndex.ToString();
         GetComponent<GridLayoutGroup>().enabled = true;
 
         /* Instantiates file childs */

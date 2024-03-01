@@ -22,7 +22,6 @@ public class DraggablePoint : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
         parentAfterDrag = transform.parent;
         transform.SetParent(transform.root.GetChild(0));
         transform.SetAsLastSibling();
-        Debug.Log(transform.parent);
 
         image.raycastTarget = false;
     }
