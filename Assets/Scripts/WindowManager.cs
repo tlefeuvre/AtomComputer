@@ -32,6 +32,7 @@ public class WindowManager : MonoBehaviour
     public AudioClip onStartAudio;
     public GameObject backButton;
     public GameObject depthPrefab;
+    public GameObject unlockPrefab;
     public Architecture architecture;
     public List<FileTemplate> arborescence = new List<FileTemplate>();
 
@@ -74,8 +75,10 @@ public class WindowManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        depthPrefab.GetComponentInChildren<TMP_Text>().text ="Level"+'\n'+ arborescence[arborescence.Count - 1].depthIndex.ToString();
+        depthPrefab.GetComponentInChildren<TMP_Text>().text ="Niveau "+'\n'+ arborescence[arborescence.Count - 1].depthIndex.ToString();
+        unlockPrefab.GetComponentInChildren<TMP_Text>().text ="Dossier "+'\n'+ (arborescence[arborescence.Count - 1].depthIndex-1).ToString() +" ouvert";
         GetComponent<GridLayoutGroup>().enabled = true;
+        StartCoroutine("desactivatepopup");
 
         /* Instantiates file childs */
         int id = arborescence.Count - 1;
@@ -214,5 +217,11 @@ public class WindowManager : MonoBehaviour
 
         newFile.GetComponent<RectTransform>().anchoredPosition = new Vector2(-1 * transform.GetComponent<RectTransform>().anchoredPosition.x, 0);
         newFile.transform.localPosition = new Vector3(newFile.transform.localPosition.x, newFile.transform.localPosition.y, 0);
+    }
+
+    IEnumerator desactivatepopup()
+    {
+        yield return new WaitForSeconds(1.0f);
+        unlockPrefab.SetActive(false);
     }
 }

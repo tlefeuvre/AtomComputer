@@ -31,6 +31,7 @@ public class TextFileManager : MonoBehaviour
 
     public void SetParameters(string name, string content, int id, bool sendable)
     {
+        Debug.Log("set parameters text file");
         fileContent.text = content;
         fileName.text = name;
         idToSend = id;
@@ -44,16 +45,19 @@ public class TextFileManager : MonoBehaviour
     }
     public void sendId()
     {
-        sentPopup.SetActive(true);
+        if(sentPopup)
+            sentPopup.SetActive(true);
         StartCoroutine("desactivatepopup");
         ClientManager.instance.SendMessage(idToSend);
     }
 
     IEnumerator desactivatepopup()
     {
-        yield return new WaitForSeconds(1);
-        sentPopup.SetActive(false);
+        yield return new WaitForSeconds(.5f);
+        if (sentPopup)
+            sentPopup.SetActive(false);
     }
- 
+    
+
 }
 

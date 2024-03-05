@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class DropSlot : MonoBehaviour, IDropHandler
 {
     public bool  isMiniGame4 = false;
+    public GameObject minigame4;
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;
@@ -34,6 +35,10 @@ public class DropSlot : MonoBehaviour, IDropHandler
 
     public void WeaponManager(string type)
     {
+        if (minigame4)
+        {
+            minigame4.GetComponent<MiniGame4>().StartLoading();
+        }
         if (type == "Folder")
             Debug.Log("folder");
 

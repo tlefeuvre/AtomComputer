@@ -86,6 +86,17 @@ public class FalconManager : MonoBehaviour
         popup.SetActive(false);
 
     }
+
+
+    public void newRestartFalcon()
+    {
+        ClientManager.instance.SendMessage(12);
+
+    }
+    public void newFinishFalcon()
+    {
+
+    }
 }
 
 

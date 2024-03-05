@@ -30,75 +30,25 @@ MonoBehaviour:
       textContent: 
       password: mdp1
       depthIndex: 2
-      isLock: 0
+      isLock: 1
       idToSend: 0
       sendable: 0
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
-      type: 0
+      type: 3
       childs:
       - name: DOSSIER 2
         textFileName: 
         textContent: 
         password: mdp2
         depthIndex: 3
-        isLock: 0
+        isLock: 1
         idToSend: 0
         sendable: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 0}
-        type: 0
+        type: 3
         childs:
-        - name: logs.txt
-          textFileName: logs.txt
-          textContent: "Log - Jour 113 : Mon isolement s'intensifie. La guerre fait
-            rage de plus belle dehors, mais je me suis retir\xE9 dans les m\xE9andres
-            de la matrice. Les personnages des \xE9missions qui tournent en boucle
-            sur ma t\xE9l\xE9vision sont devenus ma nouvelle famille, mes amis. Mes
-            interactions avec le monde ext\xE9rieur sont limit\xE9es \xE0 travers
-            des interfaces num\xE9riques. Rebecca, ma muse, je crains que le lien
-            qui nous unit ne puisse survivre \xE0 cette fracture entre deux mondes.
-            Pourtant, je persiste dans l'espoir de cr\xE9er un havre o\xF9 nous pourrions
-            \xEAtre r\xE9unis \xE9ternellement.                                          
-            Log - Jour 200 : Deux cents jours d'une existence fragment\xE9e. La matrice
-            est \xE0 la fois ma prison et ma lib\xE9ration. Les \xE9missions de t\xE9l\xE9vision
-            ont remplac\xE9 la r\xE9alit\xE9, distordant mes perceptions au fil du
-            temps. Rebecca, si tu lis toujours mes mots, sache que mon amour pour
-            toi transcende cette r\xE9alit\xE9 alt\xE9r\xE9e. Ma passion pour l'\xE9vasion
-            num\xE9rique s'est transform\xE9e en une obsession d\xE9vorante, mais
-            au fond de moi, une voix murmure que cette qu\xEAte pourrait \xEAtre
-            un \xE9chappatoire illusoire. J\u2019ai peur d\u2019\xEAtre pris au pi\xE8ge                                    
-            Log - Jour 224 : Les retomb\xE9es nucl\xE9aires rendent le monde invivable
-            au dehors. De toute fa\xE7on, ce monde n\u2019existe plus pour moi. Rebecca
-            j\u2019ai r\xE9ussi, je vais te rejoindre bient\xF4t et nous serons en
-            paix tous les deux. Oui, la prochaine version de mon programme sera la
-            bonne, ma ch\xE8re Rebecca. Je te le promets. J\u2019y pense mais je
-            ne t\u2019ai pas parl\xE9 du troisi\xE8me symbole du mot de passe ? Je
-            me suis amus\xE9 \xE0 le dessiner en reliant \u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439!
-            \u0416\u0435\u043B\u0430\u044E \u0442\u0435\u0431\u0435 \u043F\u0440\u0435\u043A\u0440\u0430\u0441\u043D\u043E\u0433\u043E
-            \u0434\u043D\u044F \u0438 \u0432\u0434\u043E\u0445\u043D\u043E\u0432\u0435\u043D\u0438\u044F!"
-          password: 
-          depthIndex: 0
-          isLock: 0
-          idToSend: 15
-          sendable: 1
-          audioContent: {fileID: 0}
-          imageContent: {fileID: 0}
-          type: 1
-          childs: []
-        - name: AUDIO_3.MP3
-          textFileName: 'Enregistrement 3 '
-          textContent: 
-          password: 
-          depthIndex: 0
-          isLock: 0
-          idToSend: 0
-          sendable: 0
-          audioContent: {fileID: 8300000, guid: 81b9ce1ab2be7c74cae41784d24f5bfb,
-            type: 3}
-          imageContent: {fileID: 0}
-          type: 2
-          childs: []
         - name: DOSSIER 3
           textFileName: 
           textContent: 
@@ -111,6 +61,31 @@ MonoBehaviour:
             type: 3}
           imageContent: {fileID: 0}
           type: 3
+          childs:
+          - name: DOSSIER 4
+            textFileName: Logs niveau 4
+            textContent: logs ssssss
+            password: 
+            depthIndex: 5
+            isLock: 1
+            idToSend: 0
+            sendable: 0
+            audioContent: {fileID: 0}
+            imageContent: {fileID: 0}
+            type: 3
+            childs: []
+        - name: MAP
+          textFileName: 
+          textContent: 
+          password: 
+          depthIndex: 4
+          isLock: 0
+          idToSend: 0
+          sendable: 0
+          audioContent: {fileID: 0}
+          imageContent: {fileID: 21300000, guid: 0fd3e436e5a4f7943a58d1bd3d7c52f1,
+            type: 3}
+          type: 4
           childs:
           - name: Logs.txt
             textFileName: Logs niveau 4
@@ -129,25 +104,13 @@ MonoBehaviour:
             textContent: logs ssssss
             password: 
             depthIndex: 0
-            isLock: 0
+            isLock: 1
             idToSend: 0
             sendable: 0
             audioContent: {fileID: 0}
             imageContent: {fileID: 0}
             type: 3
             childs: []
-      - name: AUDIO_1.MP3
-        textFileName: Enregistrement 1
-        textContent: 
-        password: 
-        depthIndex: 0
-        isLock: 0
-        idToSend: 6
-        sendable: 0
-        audioContent: {fileID: 8300000, guid: e9ee9328b13251c4db55ecb5f619fc7a, type: 3}
-        imageContent: {fileID: 0}
-        type: 2
-        childs: []
       - name: AUDIO_2.MP3
         textFileName: Enregistrement 2
         textContent: 
@@ -159,47 +122,6 @@ MonoBehaviour:
         audioContent: {fileID: 8300000, guid: bc06616d88bff4b4684de8b6e6378c1c, type: 3}
         imageContent: {fileID: 0}
         type: 2
-        childs: []
-      - name: logs.txt
-        textFileName: logs.txt
-        textContent: "Log- Jour 60 : La guerre qui fait rage \xE0 l'ext\xE9rieur
-          semble \xEAtre un lointain murmure. Mes coll\xE8gues du laboratoire ont
-          commenc\xE9 \xE0 remettre en question mes exp\xE9riences, doutant de la
-          viabilit\xE9 de ma recherche. Une dispute am\xE8re a \xE9clat\xE9, lorsqu\u2019ils
-          m\u2019ont vus en train de voler du mat\xE9riel. J\u2019ai d\xE9cid\xE9
-          de d\xE9missionner. Ils ne comprennent pas l'urgence de ma qu\xEAte, la
-          n\xE9cessit\xE9 de transcender ce monde ravag\xE9.                              
-          Log - Jour 64 : Mon d\xE9part du laboratoire a \xE9t\xE9 amer. Les regards
-          accusateurs de mes anciens coll\xE8gues r\xE9sonnent encore dans ma m\xE9moire.
-          Je me suis retir\xE9 plus profond\xE9ment dans mes recherches, cherchant
-          refuge dans un monde num\xE9rique o\xF9 les \xE9chos de la guerre sont
-          \xE9touff\xE9s. L'isolement social grandit, mais ma passion pour l'\xE9vasion
-          num\xE9rique ne faiblit pas. Cependant, la solitude devient un fardeau
-          difficile \xE0 porter. Heureusement Rebecca est l\xE0, son sourire maintient
-          mon esprit hors de la noyade.  Log - Jour 100 : Cents jours se sont \xE9coul\xE9s
-          depuis le d\xE9but de mes recherches. J\u2019ai d\xFB reprendre mes travaux
-          de z\xE9ros \xE0 plusieurs reprises. Les \xE9missions de propagande id\xE9alis\xE9es
-          deviennent ma seule fen\xEAtre sur le monde ext\xE9rieur. Elles peignent
-          une image d\xE9form\xE9e de la r\xE9alit\xE9, mais dans ce refuge num\xE9rique,
-          c'est la seule r\xE9alit\xE9 que je connais. La guerre semble lointaine,
-          les images bienveillantes des feuilletons r\xE9sonnent comme une berceuse,
-          me distan\xE7ant encore plus du chaos r\xE9el qui persiste \xE0 l'ext\xE9rieur.
-          Je pense de plus en plus \xE0 elle\u2026 Rebecca.                                       
-          Log - Jour 105 : R\xE9ussite partielle. Une partie de ma conscience existe
-          d\xE9sormais dans le r\xE9seau, mais l'exp\xE9rience a \xE9t\xE9 plus douloureuse
-          que pr\xE9vu. Mon esprit est fragment\xE9, dispers\xE9 entre la r\xE9alit\xE9
-          physique et la matrice. Je ressens une dissonance constante, une lutte
-          pour maintenir ma coh\xE9rence. Rebecca, si tu lis ceci, sache quae mon
-          amour pour toi est la seule chose qui me garde ancr\xE9 \xE0 cette r\xE9alit\xE9
-          fractur\xE9e."
-        password: 
-        depthIndex: 0
-        isLock: 0
-        idToSend: 4
-        sendable: 0
-        audioContent: {fileID: 0}
-        imageContent: {fileID: 0}
-        type: 1
         childs: []
     - name: logs.txt
       textFileName: logs.txt
@@ -222,76 +144,4 @@ MonoBehaviour:
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
       type: 1
-      childs: []
-    - name: PATTERNS
-      textFileName: 
-      textContent: 
-      password: 
-      depthIndex: 0
-      isLock: 0
-      idToSend: 0
-      sendable: 0
-      audioContent: {fileID: 0}
-      imageContent: {fileID: 0}
-      type: 0
-      childs:
-      - name: NIVEAU_01.PNG
-        textFileName: NIVEAU_01.PNG
-        textContent: 
-        password: 
-        depthIndex: 0
-        isLock: 0
-        idToSend: 0
-        sendable: 0
-        audioContent: {fileID: 0}
-        imageContent: {fileID: 21300000, guid: db2666b79271b2b49952007e702d1fac, type: 3}
-        type: 4
-        childs: []
-      - name: NIVEAU_02.PNG
-        textFileName: NIVEAU_02.PNG
-        textContent: 
-        password: 
-        depthIndex: 0
-        isLock: 0
-        idToSend: 0
-        sendable: 0
-        audioContent: {fileID: 0}
-        imageContent: {fileID: 21300000, guid: 04fd00a841e61f4458216e7bb5996be9, type: 3}
-        type: 4
-        childs: []
-      - name: NIVEAU_03.PNG
-        textFileName: NIVEAU_03.PNG
-        textContent: 
-        password: 
-        depthIndex: 0
-        isLock: 0
-        idToSend: 0
-        sendable: 0
-        audioContent: {fileID: 0}
-        imageContent: {fileID: 21300000, guid: 168c42afc9ae29f4cb69d275ac363a3e, type: 3}
-        type: 4
-        childs: []
-      - name: COMMENT JOUER
-        textFileName: COMMENT JOUER
-        textContent: 
-        password: 
-        depthIndex: 0
-        isLock: 0
-        idToSend: 0
-        sendable: 0
-        audioContent: {fileID: 0}
-        imageContent: {fileID: 21300000, guid: 3c3c9ef0dc084ef4194bf64cea617579, type: 3}
-        type: 4
-        childs: []
-    - name: .EXE
-      textFileName: .EXE
-      textContent: 
-      password: CHO
-      depthIndex: 0
-      isLock: 0
-      idToSend: 0
-      sendable: 0
-      audioContent: {fileID: 0}
-      imageContent: {fileID: 0}
-      type: 5
       childs: []
