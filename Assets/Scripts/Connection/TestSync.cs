@@ -17,6 +17,7 @@ public class TestSync : MonoBehaviour
     public UnityEvent GetFolder2;
     public UnityEvent GetFolder3;
 
+    public UnityEvent FalconisFinish;
 
     private void OnEnable()
     {
@@ -62,7 +63,12 @@ public class TestSync : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.J))
+        if (Input.GetKeyUp(KeyCode.A))
+            FalconisFinish.Invoke();
+
+
+
+        if (Input.GetKeyUp(KeyCode.J))
         {
             ModifyScriptable.instance.GetUnlockFolderName("DOSSIER 2");
 

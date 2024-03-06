@@ -30,24 +30,24 @@ MonoBehaviour:
       textContent: 
       password: mdp1
       depthIndex: 2
-      isLock: 1
+      isLock: 0
       idToSend: 0
       sendable: 0
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
-      type: 3
+      type: 0
       childs:
       - name: DOSSIER 2
         textFileName: 
         textContent: 
         password: mdp2
         depthIndex: 3
-        isLock: 1
+        isLock: 0
         idToSend: 0
         sendable: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 0}
-        type: 3
+        type: 0
         childs:
         - name: DOSSIER 3
           textFileName: 
@@ -83,7 +83,7 @@ MonoBehaviour:
           idToSend: 0
           sendable: 0
           audioContent: {fileID: 0}
-          imageContent: {fileID: 21300000, guid: 0fd3e436e5a4f7943a58d1bd3d7c52f1,
+          imageContent: {fileID: 21300000, guid: 48a0a756d52aa2f4bbe21dded8571f42,
             type: 3}
           type: 4
           childs:
@@ -111,6 +111,19 @@ MonoBehaviour:
             imageContent: {fileID: 0}
             type: 3
             childs: []
+        - name: LAUNCH.EXE
+          textFileName: 
+          textContent: 
+          password: 
+          depthIndex: 0
+          isLock: 0
+          idToSend: 10
+          sendable: 1
+          audioContent: {fileID: 0}
+          imageContent: {fileID: 21300000, guid: c3d54bffba2ddaa44a6a58ed97002666,
+            type: 3}
+          type: 6
+          childs: []
       - name: AUDIO_2.MP3
         textFileName: Enregistrement 2
         textContent: 
@@ -122,6 +135,18 @@ MonoBehaviour:
         audioContent: {fileID: 8300000, guid: bc06616d88bff4b4684de8b6e6378c1c, type: 3}
         imageContent: {fileID: 0}
         type: 2
+        childs: []
+      - name: LAUNCH.EXE
+        textFileName: 
+        textContent: 
+        password: 
+        depthIndex: 0
+        isLock: 0
+        idToSend: 10
+        sendable: 1
+        audioContent: {fileID: 0}
+        imageContent: {fileID: 21300000, guid: c3d54bffba2ddaa44a6a58ed97002666, type: 3}
+        type: 6
         childs: []
     - name: logs.txt
       textFileName: logs.txt
@@ -144,4 +169,16 @@ MonoBehaviour:
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
       type: 1
+      childs: []
+    - name: LAUNCH.EXE
+      textFileName: 
+      textContent: 
+      password: 
+      depthIndex: 0
+      isLock: 0
+      idToSend: 10
+      sendable: 1
+      audioContent: {fileID: 0}
+      imageContent: {fileID: 21300000, guid: c3d54bffba2ddaa44a6a58ed97002666, type: 3}
+      type: 6
       childs: []

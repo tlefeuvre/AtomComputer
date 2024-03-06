@@ -10,7 +10,8 @@ public enum FileType
     AUDIO,
     LOCK,
     IMAGE,
-    SUCCESS
+    SUCCESS,
+    HIDDEN
 }
 
 [System.Serializable]

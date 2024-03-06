@@ -23,6 +23,7 @@ public class ClientManager : MonoBehaviour
     public GameObject textport;
 
     private bool send;
+    private bool firstSent = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -96,6 +97,11 @@ public class ClientManager : MonoBehaviour
 
     public void SendMessage(int text)
     {
+        if (!firstSent && text ==10)
+        {
+            WindowManager.instance.DisplayHiddenFiles();
+            firstSent = true;
+        }
         Debug.Log("text  envoyé :" + text);
         Byte[] sendBytes = System.Text.Encoding.UTF8.GetBytes(text + "\n");
         mySocket.GetStream().Write(sendBytes, 0, sendBytes.Length);

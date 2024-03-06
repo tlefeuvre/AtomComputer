@@ -42,6 +42,15 @@ public class DropSlot : MonoBehaviour, IDropHandler
         if (type == "Folder")
             Debug.Log("folder");
 
+        if (type == "Disk")
+            Debug.Log("Disk");
+
+        if (type == "Save")
+            Debug.Log("Save");
+
+        if (type == "Defender")
+            Debug.Log("Defender");
+
         if (type == "Cursor")
             GameObject.FindGameObjectWithTag("Cursor").SetActive(false);
     }

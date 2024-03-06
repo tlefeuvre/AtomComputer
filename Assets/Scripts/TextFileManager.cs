@@ -16,7 +16,8 @@ public class TextFileManager : MonoBehaviour
 
     void Start()
     {
-        sentPopup.SetActive(false);
+        if(sentPopup)
+            sentPopup.SetActive(false);
 
     }
 

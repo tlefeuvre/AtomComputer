@@ -36,8 +36,14 @@ public class FileButtonManager : MonoBehaviour
     public void OpenFile()
     {
         Debug.Log("openfile");
-  
-        if(fileType == FileType.LOCK && isLock)
+        if (fileType == FileType.HIDDEN)
+        {
+            WindowManager.instance.ActivateFalcon();
+            Debug.Log("HIDDEN");
+            return;
+        }
+
+        if (fileType == FileType.LOCK && isLock)
         {
             if(fileName == ModifyScriptable.instance.foldersNames[0])
             {
@@ -75,6 +81,7 @@ public class FileButtonManager : MonoBehaviour
                 miniGame4.SetActive(true);
 
             }
+           
             /*warningObject.transform.SetParent(transform.parent.parent.parent, false);
             warningObject.transform.localPosition = new Vector3 (0.0f, warningObject.transform.localPosition.y, warningObject.transform.localPosition.z);
             warningObject.SetActive(true);

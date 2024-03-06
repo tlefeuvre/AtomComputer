@@ -14,6 +14,7 @@ public class WindowManager : MonoBehaviour
     public GameObject audioContentPrefab;
     public GameObject VictoryPrefab;
     public GameObject ImagePrefab;
+    public GameObject FalconActivationPrefab;
 
 
     [Header("Icones")]
@@ -24,6 +25,7 @@ public class WindowManager : MonoBehaviour
     public Sprite lockFileImage;
     public Sprite successFileImage;
     public Sprite ImageFileImage;
+    public Sprite hiddenFileImage;
 
     private Dictionary<FileType, Sprite> filesImagesDictionnary;
 
@@ -33,12 +35,19 @@ public class WindowManager : MonoBehaviour
     public GameObject backButton;
     public GameObject depthPrefab;
     public GameObject unlockPrefab;
+    public GameObject tutoPrefab;
     public Architecture architecture;
     public List<FileTemplate> arborescence = new List<FileTemplate>();
 
+    public List<GameObject> hiddenFiles = new List<GameObject>();
     private AudioSource audioSource;
 
+    private float scaleFile = 1.8f;
     private bool allUnlocked;
+    private bool isDisplay = false;
+    public float YOffset = 70;
+
+    private bool firstTuto = false;
     void Start()
     {
         allUnlocked = false;
@@ -52,6 +61,7 @@ public class WindowManager : MonoBehaviour
             { FileType.LOCK,lockFileImage},
             { FileType.SUCCESS,successFileImage},
             { FileType.IMAGE,ImageFileImage},
+            { FileType.HIDDEN,hiddenFileImage},
         };
 
         instance = this;
@@ -63,6 +73,22 @@ public class WindowManager : MonoBehaviour
     private void Update()
     {
         transform.SetAsFirstSibling();
+        if (isDisplay)
+        {
+            Debug.Log("not hide hupdate");
+
+            foreach (GameObject file in hiddenFiles)
+                if (file)
+                    file.SetActive(true);
+        }
+
+        else
+        {
+            Debug.Log("hide hupdate");
+            foreach (GameObject file2 in hiddenFiles)
+                if (file2)
+                    file2.SetActive(false);
+        }
     }
     public void NewWindow()
     {
@@ -85,7 +111,7 @@ public class WindowManager : MonoBehaviour
 
 
 
-        if (arborescence[id].type == FileType.FOLDER || arborescence[id].type == FileType.LOCK)
+        if (arborescence[id].type == FileType.FOLDER || arborescence[id].type == FileType.LOCK || arborescence[id].type == FileType.HIDDEN)
         {
             //backButton.SetActive(true);
             depthPrefab.SetActive(true );
@@ -130,9 +156,15 @@ public class WindowManager : MonoBehaviour
     {
         GameObject newFile = Instantiate(filePrefab);
         newFile.transform.SetParent(transform);
-        newFile.transform.localScale = Vector3.one;
+        newFile.transform.localScale = Vector3.one * scaleFile;
         newFile.transform.localPosition = new Vector3(newFile.transform.localPosition.x, newFile.transform.localPosition.y, 0);
         newFile.GetComponent<FileButtonManager>().SetParameters(image,index, name, fileType, password);
+        if(fileType == FileType.HIDDEN)
+        {
+            hiddenFiles.Add(newFile);
+            newFile.SetActive(false);
+        }
+        
     }
 
     /* Display text content of a text file*/
@@ -145,7 +177,7 @@ public class WindowManager : MonoBehaviour
         newFile.transform.SetParent(transform);
         newFile.transform.localScale = Vector3.one;
 
-        newFile.GetComponent<RectTransform>().anchoredPosition = new Vector2(-1 * transform.GetComponent<RectTransform>().anchoredPosition.x, 0);
+        newFile.GetComponent<RectTransform>().anchoredPosition = new Vector2(-1 * transform.GetComponent<RectTransform>().anchoredPosition.x, YOffset);
         newFile.transform.localPosition = new Vector3(newFile.transform.localPosition.x, newFile.transform.localPosition.y, 0);
 
         newFile.GetComponent<TextFileManager>().SetParameters(fileName, textContent,id,sendable);
@@ -162,7 +194,7 @@ public class WindowManager : MonoBehaviour
         newFile.transform.SetParent(transform);
         newFile.transform.localScale = Vector3.one;
 
-        newFile.GetComponent<RectTransform>().anchoredPosition = new Vector2(-1 * transform.GetComponent<RectTransform>().anchoredPosition.x, 0);
+        newFile.GetComponent<RectTransform>().anchoredPosition = new Vector2(-1 * transform.GetComponent<RectTransform>().anchoredPosition.x, YOffset);
         newFile.transform.localPosition = new Vector3(newFile.transform.localPosition.x, newFile.transform.localPosition.y, 0);
 
         float clipLenght = audioClip.length;
@@ -180,9 +212,9 @@ public class WindowManager : MonoBehaviour
         GameObject newFile = Instantiate(ImagePrefab);
 
         newFile.transform.SetParent(transform);
-        newFile.transform.localScale = Vector3.one;
+        newFile.transform.localScale = Vector3.one ;
 
-        newFile.GetComponent<RectTransform>().anchoredPosition = new Vector2(-1 * transform.GetComponent<RectTransform>().anchoredPosition.x, 0);
+        newFile.GetComponent<RectTransform>().anchoredPosition = new Vector2(-1 * transform.GetComponent<RectTransform>().anchoredPosition.x, YOffset);
         newFile.transform.localPosition = new Vector3(newFile.transform.localPosition.x, newFile.transform.localPosition.y, 0);
 
         newFile.GetComponent<ImageFileManager>().SetParameters(img,name);
@@ -223,5 +255,25 @@ public class WindowManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         unlockPrefab.SetActive(false);
+    }
+
+    public void DisplayHiddenFiles()
+    {
+        if (!firstTuto)
+        {
+            tutoPrefab.SetActive(true);
+            firstTuto = true;
+        }
+        isDisplay = true;
+    }
+    public void HideHiddenFiles()
+    {
+        isDisplay = false;
+    }
+    public void ActivateFalcon()
+    {
+        HideHiddenFiles();
+        FalconState.Instance.SetFalconState(true);
+        FalconActivationPrefab.SetActive(true );
     }
 }
