@@ -38,6 +38,7 @@ public class FileButtonManager : MonoBehaviour
         Debug.Log("openfile");
         if (fileType == FileType.HIDDEN)
         {
+            WindowManager.instance.PlayLoadingAudio();
             WindowManager.instance.ActivateFalcon();
             Debug.Log("HIDDEN");
             return;
@@ -45,6 +46,7 @@ public class FileButtonManager : MonoBehaviour
 
         if (fileType == FileType.LOCK && isLock)
         {
+            WindowManager.instance.PlayClickAudio();
             if(fileName == ModifyScriptable.instance.foldersNames[0])
             {
                 Debug.Log("set active mini game " + isLock);

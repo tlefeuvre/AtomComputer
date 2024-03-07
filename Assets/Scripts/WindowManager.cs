@@ -29,9 +29,15 @@ public class WindowManager : MonoBehaviour
 
     private Dictionary<FileType, Sprite> filesImagesDictionnary;
 
-    [Header("Others")]
+    [Header("Audio")]
     public AudioClip clickAudio;
     public AudioClip onStartAudio;
+    public AudioClip successClickAudio;
+    public AudioClip errorClickAudio;
+    public AudioClip loadingAudio;
+    private AudioSource audioSource;
+
+    [Header("Others")]
     public GameObject backButton;
     public GameObject depthPrefab;
     public GameObject unlockPrefab;
@@ -40,7 +46,6 @@ public class WindowManager : MonoBehaviour
     public List<FileTemplate> arborescence = new List<FileTemplate>();
 
     public List<GameObject> hiddenFiles = new List<GameObject>();
-    private AudioSource audioSource;
 
     private float scaleFile = 1.8f;
     private bool allUnlocked;
@@ -92,8 +97,7 @@ public class WindowManager : MonoBehaviour
     }
     public void NewWindow()
     {
-        audioSource.clip = clickAudio;
-        audioSource.Play();
+        PlayClickAudio();
         Debug.Log("new window");
         /* Clear */
         foreach(Transform child in transform)
@@ -147,7 +151,7 @@ public class WindowManager : MonoBehaviour
             backButton.SetActive(false);
             depthPrefab.SetActive(false);
 
-            OpenImageFile(arborescence[id].imageContent, arborescence[id].textFileName);
+            OpenImageFile(arborescence[id].imageContent, arborescence[id].textFileName, arborescence[id].idToSend, arborescence[id].sendable);
         }
     }
 
@@ -201,11 +205,11 @@ public class WindowManager : MonoBehaviour
         
         newFile.GetComponent<AudioFileManager>().SetParameters(fileName, clipLenght, audioClip,id,sendable);
 
-
+        audioSource.Stop();
         audioSource.clip = audioClip;
         audioSource.Play();
     }
-    public void OpenImageFile(Sprite img, string name)
+    public void OpenImageFile(Sprite img, string name, int id, bool sendable)
     {
         GetComponent<GridLayoutGroup>().enabled = false;
 
@@ -217,7 +221,7 @@ public class WindowManager : MonoBehaviour
         newFile.GetComponent<RectTransform>().anchoredPosition = new Vector2(-1 * transform.GetComponent<RectTransform>().anchoredPosition.x, YOffset);
         newFile.transform.localPosition = new Vector3(newFile.transform.localPosition.x, newFile.transform.localPosition.y, 0);
 
-        newFile.GetComponent<ImageFileManager>().SetParameters(img,name);
+        newFile.GetComponent<ImageFileManager>().SetParameters(img,name, id, sendable);
 
     }
     /* Go back in arborescence */
@@ -275,5 +279,39 @@ public class WindowManager : MonoBehaviour
         HideHiddenFiles();
         FalconState.Instance.SetFalconState(true);
         FalconActivationPrefab.SetActive(true );
+    }
+
+    public void PlayClickAudio()
+    {
+        if (audioSource)
+        {
+            audioSource.clip = clickAudio;
+            audioSource.Play();
+        }
+    }
+
+    public void PlayErrorAudio()
+    {
+        if (audioSource)
+        {
+            audioSource.clip = clickAudio;
+            audioSource.Play();
+        }
+    }
+    public void PlaySuccessAudio()
+    {
+        if (audioSource)
+        {
+            audioSource.clip = clickAudio;
+            audioSource.Play();
+        }
+    }
+    public void PlayLoadingAudio()
+    {
+        if (audioSource)
+        {
+            audioSource.clip = clickAudio;
+            audioSource.Play();
+        }
     }
 }

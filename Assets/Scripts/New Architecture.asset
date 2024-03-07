@@ -42,12 +42,12 @@ MonoBehaviour:
         textContent: 
         password: mdp2
         depthIndex: 3
-        isLock: 0
+        isLock: 1
         idToSend: 0
         sendable: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 0}
-        type: 0
+        type: 3
         childs:
         - name: DOSSIER 3
           textFileName: 
@@ -74,6 +74,26 @@ MonoBehaviour:
             imageContent: {fileID: 0}
             type: 3
             childs: []
+          - name: log.txt
+            textFileName: Log- Jour 225
+            textContent: "Je n\u2019ai pas ferm\xE9 l'\u0153il depuis des jours.
+              L\u2019aboutissement imminent de mes recherches m\u2019obs\xE8de et
+              le son de la t\xE9l\xE9vision me garde \xE9veill\xE9. Ce soir, c\u2019est
+              le grand soir. Je vais pouvoir me transf\xE9rer dans mon poste de t\xE9l\xE9vision.
+              Rebecca\u2026Rebecca je te rejoins. La derni\xE8re \xE9preuve est p\xE9rilleuse,
+              je ne sais pas quel en sera le r\xE9sultat...<b><color=\"red\"> Le
+              virus dans la simulation va se d\xE9fendre et il faudra l\u2019affronter.  
+              Il y a peut-\xEAtre une solution, je pourrais peut-\xEAtre envoyer
+              des objets dans la simulation pour m\u2019aider. </b></color>  "
+            password: 
+            depthIndex: 0
+            isLock: 0
+            idToSend: 10
+            sendable: 0
+            audioContent: {fileID: 0}
+            imageContent: {fileID: 0}
+            type: 1
+            childs: []
         - name: MAP
           textFileName: 
           textContent: 
@@ -81,7 +101,7 @@ MonoBehaviour:
           depthIndex: 4
           isLock: 0
           idToSend: 0
-          sendable: 0
+          sendable: 1
           audioContent: {fileID: 0}
           imageContent: {fileID: 21300000, guid: 48a0a756d52aa2f4bbe21dded8571f42,
             type: 3}
@@ -111,6 +131,39 @@ MonoBehaviour:
             imageContent: {fileID: 0}
             type: 3
             childs: []
+        - name: log.txt
+          textFileName: Log- Jour 224
+          textContent: "Les retomb\xE9es nucl\xE9aires rendent le monde invivable
+            au-dehors. De toute fa\xE7on, ce monde n\u2019existe plus pour moi. Rebecca
+            j\u2019ai r\xE9ussi, je vais te rejoindre bient\xF4t et nous serons en
+            paix tous les deux. Oui, la prochaine version de mon programme sera la
+            bonne, ma ch\xE8re Rebecca. Je te le promets. J\u2019y pense, mais je
+            ne t\u2019ai pas parl\xE9 du symbole cach\xE9 ? Je me suis amus\xE9 \xE0
+            dessiner une petite carte, mais  <b><color=\"red\"> pour conna\xEEtre
+            le bon symbole, il faut la regarder depuis l\u2019int\xE9rieur de la
+            simulation !  </b></color>"
+          password: 
+          depthIndex: 0
+          isLock: 0
+          idToSend: 10
+          sendable: 0
+          audioContent: {fileID: 0}
+          imageContent: {fileID: 0}
+          type: 1
+          childs: []
+        - name: AUDIO2.MP3
+          textFileName: Enregistrement 2
+          textContent: 
+          password: 
+          depthIndex: 0
+          isLock: 0
+          idToSend: 10
+          sendable: 0
+          audioContent: {fileID: 8300000, guid: d1addf461f12cc747b03c2426a13b861,
+            type: 3}
+          imageContent: {fileID: 0}
+          type: 2
+          childs: []
         - name: LAUNCH.EXE
           textFileName: 
           textContent: 
@@ -124,17 +177,50 @@ MonoBehaviour:
             type: 3}
           type: 6
           childs: []
-      - name: AUDIO_2.MP3
-        textFileName: Enregistrement 2
+      - name: AUDIO1.MP3
+        textFileName: Enregistrement 1
         textContent: 
         password: 
         depthIndex: 0
         isLock: 0
         idToSend: 13
-        sendable: 1
+        sendable: 0
         audioContent: {fileID: 8300000, guid: bc06616d88bff4b4684de8b6e6378c1c, type: 3}
         imageContent: {fileID: 0}
         type: 2
+        childs: []
+      - name: log.txt
+        textFileName: Log- Jour 60
+        textContent: "Rebecca, ma ch\xE8re Rebecca, je crains pour notre avenir.
+          La guerre gronde sans rel\xE2che. Je sens le danger r\xF4der \xE0 chaque
+          coin de rue. La technologie nucl\xE9aire qui a promis de nous propulser
+          vers l'avenir est devenue le bourreau de notre propre existence. Si seulement
+          je pouvais te prot\xE9ger de tout cela, te pr\xE9server de cette folie
+          destructrice.<b><color=\"red\"> J\u2019ai plac\xE9 le deuxi\xE8me symbole
+          sur cette \xE9trange sculpture qui tra\xEEne dans la simulation</b></color>
+          et que tu m\u2019a offerte. Pardonne-moi Rebecca, j\u2019ai d\xFB la divis\xE9e
+          en morceau, mais <b><color=\"red\"> j\u2019ai gard\xE9 un plan de la sculpture
+          d\u2019origine </b></color>"
+        password: 
+        depthIndex: 0
+        isLock: 0
+        idToSend: 10
+        sendable: 0
+        audioContent: {fileID: 0}
+        imageContent: {fileID: 0}
+        type: 1
+        childs: []
+      - name: SCULPT
+        textFileName: 
+        textContent: 
+        password: 
+        depthIndex: 0
+        isLock: 0
+        idToSend: 10
+        sendable: 1
+        audioContent: {fileID: 0}
+        imageContent: {fileID: 21300000, guid: 91762e2485ea6904b8005f9dc914ed3b, type: 3}
+        type: 4
         childs: []
       - name: LAUNCH.EXE
         textFileName: 
@@ -149,9 +235,30 @@ MonoBehaviour:
         type: 6
         childs: []
     - name: logs.txt
-      textFileName: logs.txt
-      textContent: "Log - Jour 37 :   Isolation totale. Les communications avec l'ext\xE9rieur
-        ont \xE9t\xE9 coup\xE9es depuis quelques jours. Mes exp\xE9riences progressent
+      textFileName: Log - Jour 18
+      textContent: "La guerre atomique fait rage dans le pays, chaque explosion secoue
+        le sol, et le ciel est constamment embras\xE9. Mon appartement souterrain
+        est devenu mon refuge, un sanctuaire vou\xE9 \xE0 ma recherche de l'immortalit\xE9
+        num\xE9rique. Je ne vais presque plus au laboratoire pour travailler, mais
+        cela en vaut la peine, chaque avanc\xE9e me rapproche de mon objectif ultime
+        : l'\xE9vasion num\xE9rique. Pour des raisons de s\xE9curit\xE9, j\u2019ai
+        crypt\xE9 le mot de passe de lancement de mon programme.  <b><color=\"red\">
+        Quatre \xE9preuves prot\xE8gent l\u2019acc\xE8s au programme.  </b></color>J\u2019ai
+        fait en sorte de cacher les symboles dans la simulation pour \xEAtre le seul
+        capable d\u2019y acc\xE9der !"
+      password: 
+      depthIndex: 0
+      isLock: 0
+      idToSend: 10
+      sendable: 0
+      audioContent: {fileID: 0}
+      imageContent: {fileID: 0}
+      type: 1
+      childs: []
+    - name: logs.txt
+      textFileName: 'Log - Jour 37 '
+      textContent: "Isolation totale. Les communications avec l'ext\xE9rieur ont
+        \xE9t\xE9 coup\xE9es depuis quelques jours. Mes exp\xE9riences progressent
         lentement, mais j\u2019ai de bons espoirs. Je ne vois plus personnes, m\xEAme
         mes coll\xE8gues, de toute fa\xE7on ils ne peuvent pas comprendre. Dans toute
         cette noirceur j\u2019ai fais la rencontre d\u2019une jeune femme : Rebecca.

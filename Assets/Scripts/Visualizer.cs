@@ -19,6 +19,17 @@ public class Visualizer : MonoBehaviour
     public VisualizerObjectScript[] visualizerObjects;
     AudioSource m_audioSource;
     // Start is called before the first frame update
+
+    private void OnDestroy()
+    {
+        Destroy(m_audioSource);
+    }
+
+    private void OnDisable()
+    {
+        Destroy(m_audioSource);
+
+    }
     void Start()
     {
         visualizerObjects = GetComponentsInChildren<VisualizerObjectScript>();
