@@ -12,36 +12,21 @@ public class ClientManager : MonoBehaviour
 
     public String Host = "localhost";
     public Int32 Port = 55000;
+    public bool connectOnAwake;
 
     TcpClient mySocket = null;
     NetworkStream theStream = null;
 
-
-
-    public GameObject buttonconnect;
-    public GameObject textip;
-    public GameObject textport;
-
-    private bool send;
-    private bool firstSent = false;
     // Start is called before the first frame update
     void Start()
     {
-        send = false;
-
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         instance = this;
         mySocket = new TcpClient();
-        //SetupSocket();
+        if(connectOnAwake)
+            SetupSocket();
     }
-    public void SetHostIp(string ip)
-    {
-        Host = ip;
-    }
-    public void SetHostPort(string port)
-    {
-        Port = int.Parse(port);
-    }
+
     private void Update()
     {
         if (!mySocket.Connected)
@@ -50,32 +35,24 @@ public class ClientManager : MonoBehaviour
         }
         else
         {
-            if (!send)
-            {
-                send = true;
-                ClientManager.instance.SendMessage(10);
-
-            }
-            buttonconnect.SetActive(false);
-            textip.SetActive(false);
-            textport.SetActive(false);
-
             ProcessMessage();
         }
     }
 
     public void SetupSocket()
     {
-        Debug.Log(Host);
-        Debug.Log(Port);
+        Debug.Log("Trying to connect to : "+Host+":"+Port+" ...");
         try
         {
             mySocket.Connect(Host, Port);
+            //Debug.Log(" - "+mySocket.Available);
+            SendTcpMessage("3;1;1");
         }
         catch (Exception e)
         {
             Debug.Log("Socket error: " + e);
         }
+        Debug.Log("Connected!");
     }
 
     private void ProcessMessage()
@@ -86,25 +63,21 @@ public class ClientManager : MonoBehaviour
         {
             StreamReader reader = new StreamReader(theStream);
             string msg = reader.ReadLine();
-
-            int code;
-            if (int.TryParse(msg, out code))
-            {
-                SynchronizeManager.RaiseSyncRequest(code);
-            }
+            SynchronizeManager.RaiseSyncRequest(msg);
         }
     }
 
-    public void SendMessage(int text)
+    public void SendTcpMessage(string text)
     {
-        if (!firstSent && text ==10)
+        Debug.Log("Sending \""+text+"\" ...");
+        if (!mySocket.Connected)
         {
-            WindowManager.instance.DisplayHiddenFiles();
-            firstSent = true;
+            Debug.Log("Can't send, socket not connected.");
+            return;
         }
-        Debug.Log("text  envoyé :" + text);
         Byte[] sendBytes = System.Text.Encoding.UTF8.GetBytes(text + "\n");
         mySocket.GetStream().Write(sendBytes, 0, sendBytes.Length);
+        Debug.Log("Sent !");
     }
 
     private void OnApplicationQuit()

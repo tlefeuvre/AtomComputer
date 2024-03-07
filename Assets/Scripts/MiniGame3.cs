@@ -5,15 +5,20 @@ using UnityEngine.UI;
 
 public class MiniGame3 : MonoBehaviour
 {
+
+    public AudioSource audioSource;
+    public AudioClip errorAudio;
+
     public void NotSuccess(GameObject pressedButton)
     {
+        audioSource.clip = errorAudio;
+        audioSource.Play();
         //PressedButton = pressedButton;
         //StartCoroutine("CircleAnim");
 
         //on recup l'index du boutton presse
         int index = GetButtonIndex(pressedButton);
         StartCoroutine(ChangeColor(pressedButton));
-
 
     }
     public void IsSuccess()

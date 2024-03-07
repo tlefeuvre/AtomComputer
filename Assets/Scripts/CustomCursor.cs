@@ -9,7 +9,7 @@ public class CustomCursor : MonoBehaviour
     public GameObject cursor;
     void Start()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
 
     }
 

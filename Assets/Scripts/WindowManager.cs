@@ -49,12 +49,14 @@ public class WindowManager : MonoBehaviour
 
     private float scaleFile = 1.8f;
     private bool allUnlocked;
-    private bool isDisplay = false;
+    public bool isDisplay = false;
     public float YOffset = 70;
 
-    private bool firstTuto = false;
+    public bool firstTuto = false;
     void Start()
     {
+        //Screen.SetResolution(1152, 864, false);
+
         allUnlocked = false;
         arborescence.Add(architecture.filesList[0]);
         audioSource = GetComponent<AudioSource>();

@@ -40,18 +40,37 @@ public class DropSlot : MonoBehaviour, IDropHandler
             minigame4.GetComponent<MiniGame4>().StartLoading();
         }
         if (type == "Folder")
+        {
             Debug.Log("folder");
+            ServerHandler.Instance.SendMessage(21);
+        }
 
         if (type == "Disk")
+        {
             Debug.Log("Disk");
+            ServerHandler.Instance.SendMessage(22);
+
+        }
 
         if (type == "Save")
+        {
             Debug.Log("Save");
+            ServerHandler.Instance.SendMessage(23);
+
+        }
 
         if (type == "Defender")
+        {
             Debug.Log("Defender");
+            ServerHandler.Instance.SendMessage(24);
+
+        }
 
         if (type == "Cursor")
+        {
             GameObject.FindGameObjectWithTag("Cursor").SetActive(false);
+            ServerHandler.Instance.SendMessage(25);
+
+        }
     }
 }

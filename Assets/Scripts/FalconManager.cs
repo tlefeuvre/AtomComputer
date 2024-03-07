@@ -90,7 +90,7 @@ public class FalconManager : MonoBehaviour
 
     public void newRestartFalcon()
     {
-        ClientManager.instance.SendMessage(12);
+        ServerHandler.Instance.SendMessage(12);
 
     }
     public void newFinishFalcon()

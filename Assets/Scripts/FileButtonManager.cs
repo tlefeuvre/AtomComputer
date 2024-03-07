@@ -38,6 +38,8 @@ public class FileButtonManager : MonoBehaviour
         Debug.Log("openfile");
         if (fileType == FileType.HIDDEN)
         {
+            ServerHandler.Instance.SendMessage(10);
+
             WindowManager.instance.PlayLoadingAudio();
             WindowManager.instance.ActivateFalcon();
             Debug.Log("HIDDEN");
@@ -52,7 +54,7 @@ public class FileButtonManager : MonoBehaviour
                 Debug.Log("set active mini game " + isLock);
 
                 miniGame1.transform.SetParent(transform.parent.parent, false);
-                miniGame1.transform.localPosition = new Vector3(0, 100, 0);
+                miniGame1.transform.localPosition = new Vector3(0, 0, 0);
                 miniGame1.SetActive(true);
 
             }
@@ -61,7 +63,7 @@ public class FileButtonManager : MonoBehaviour
                 Debug.Log("set active mini game " + isLock);
 
                 miniGame2.transform.SetParent(transform.parent.parent, false);
-                miniGame2.transform.localPosition = new Vector3(0, 100, 0);
+                miniGame2.transform.localPosition = new Vector3(0, 0, 0);
                 miniGame2.SetActive(true);
 
             }
@@ -70,7 +72,7 @@ public class FileButtonManager : MonoBehaviour
                 Debug.Log("set active mini game " + isLock);
 
                 miniGame3.transform.SetParent(transform.parent.parent, false);
-                miniGame3.transform.localPosition = new Vector3(0, 100, 0);
+                miniGame3.transform.localPosition = new Vector3(0, 0, 0);
                 miniGame3.SetActive(true);
 
             }
@@ -79,7 +81,7 @@ public class FileButtonManager : MonoBehaviour
                 Debug.Log("set active mini game " + isLock);
 
                 miniGame4.transform.SetParent(transform.parent.parent, false);
-                miniGame4.transform.localPosition = new Vector3(0, 100, 0);
+                miniGame4.transform.localPosition = new Vector3(0, 0, 0);
                 miniGame4.SetActive(true);
 
             }
@@ -89,11 +91,11 @@ public class FileButtonManager : MonoBehaviour
             warningObject.SetActive(true);
             StartCoroutine("closeWarning");*/
 
-            if (fileName == ModifyScriptable.instance.foldersNames[0])
-                ClientManager.instance.SendMessage(12);
+            /*if (fileName == ModifyScriptable.instance.foldersNames[0])
+                ServerHandler.Instance.SendMessage(12);*/
 
-            if (fileName == ModifyScriptable.instance.foldersNames[1])
-                ClientManager.instance.SendMessage(14);
+            if (fileName == ModifyScriptable.instance.foldersNames[3])
+                ServerHandler.Instance.SendMessage(14);
 
             /*if (fileName == "DOSSIER 2")
                 ClientManager.instance.SendMessage(12);

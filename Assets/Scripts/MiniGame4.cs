@@ -13,12 +13,16 @@ public class MiniGame4 : MonoBehaviour
     public float width;
 
     private float widthPerS = 200;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         loadingScene.SetActive(false);
         gameScene.SetActive(true);
         width = 0;
+
     }
 
     // Update is called once per frame
@@ -26,6 +30,9 @@ public class MiniGame4 : MonoBehaviour
     {
         if (startLoading)
         {
+
+          
+
             loadingScene.SetActive(true);
             gameScene.SetActive(false);
             width += (widthPerS * Time.deltaTime);

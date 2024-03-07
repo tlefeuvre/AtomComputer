@@ -20,7 +20,7 @@ public class DraggablePoint : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     public void OnBeginDrag(PointerEventData eventData)
     {
         parentAfterDrag = transform.parent;
-        transform.SetParent(transform.root.GetChild(0));
+        transform.SetParent(transform.parent.parent.parent);
         transform.SetAsLastSibling();
 
         image.raycastTarget = false;
@@ -28,12 +28,25 @@ public class DraggablePoint : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (customCursor)
+        /*if (customCursor)
         {
             Vector3 newPos = customCursor.transform.localPosition;
             transform.localPosition = newPos;
 
-        }
+        }*/
+        Vector3 newPos = Input.mousePosition;
+        newPos.z = 0;
+        //transform.localPosition = newPos;
+        /*Debug.Log(Input.mousePosition);
+        Debug.Log(transform.parent);*/
+
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = Camera.main.nearClipPlane;
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+
+        transform.position = worldPosition;
+
+
     }
 
     public void OnEndDrag(PointerEventData eventData)

@@ -49,7 +49,9 @@ public class TextFileManager : MonoBehaviour
         if(sentPopup)
             sentPopup.SetActive(true);
         StartCoroutine("desactivatepopup");
-        ClientManager.instance.SendMessage(idToSend);
+        WindowManager.instance.PlayClickAudio();
+
+        ServerHandler.Instance.SendMessage(idToSend);
     }
 
     IEnumerator desactivatepopup()

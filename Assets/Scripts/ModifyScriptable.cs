@@ -25,7 +25,7 @@ public class ModifyScriptable : MonoBehaviour
         filesToRead.Add(architecture.filesList[0]);
         ReadScriptable(architecture.filesList[0]);
 
-        unlockPopup.SetActive(false);
+        //unlockPopup.SetActive(false);
 
 
     }
@@ -74,7 +74,7 @@ public class ModifyScriptable : MonoBehaviour
         Debug.Log("GetUnlockFolderName: " + folderName);
         UnlockFolder(architecture.filesList[0], folderName);
         unlockPopupText.text = folderName + " OPEN";
-        unlockPopup.SetActive(true);
+        //unlockPopup.SetActive(true);
         StartCoroutine("closeUnlockPopup");
     }
     // Start is called before the first frame update

@@ -52,7 +52,7 @@ public class AudioFileManager : MonoBehaviour
         sentPopup.SetActive(true);
         StartCoroutine("desactivatepopup");
 
-        ClientManager.instance.SendMessage(idToSend);
+        ServerHandler.Instance.SendMessage(idToSend);
 
 
     }

@@ -5,7 +5,9 @@ using TMPro;
 public class FalconState : MonoBehaviour
 {
 
-    public TMP_Text text;
+    public TMP_Text falconStateText;
+    public TMP_Text messageStateText;
+
     private static FalconState instance = null;
     public static FalconState Instance => instance;
     private void Awake()
@@ -28,21 +30,39 @@ public class FalconState : MonoBehaviour
         transform.SetAsFirstSibling();
     }
 
+    private void Start()
+    {
+        messageStateText.text = "";
+    }
+
     public void SetFalconState(bool state)
     {
         if(state)
         {
             WindowManager.instance.HideHiddenFiles();
-            text.text = "Falcon activé";
-            text.color = Color.white;
+            falconStateText.text = "Falcon activé";
+            falconStateText.color = Color.white;
         }
         else
         {
             WindowManager.instance.DisplayHiddenFiles();
-            text.text = "Falcon désactivé";
-            text.color = Color.red;
+            falconStateText.text = "Falcon désactivé";
+            falconStateText.color = Color.red;
 
 
         }
+    }
+    public void WrongMessageRestart()
+    {
+        messageStateText.text = "Message recu incorrect. Replacer la feuille pour recommencer.";
+        falconStateText.color = Color.red;
+
+    }
+    public void GoodMessage()
+    {
+        messageStateText.text = "Message recu. Placer la feuille au niveau suivant.";
+        falconStateText.color = Color.green;
+
+
     }
 }

@@ -5,20 +5,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
+
+
 public class TestSync : MonoBehaviour
 {
-
-    //[SerializeField]
-    // private TextMeshProUGUI feedbackText;
     [SerializeField]
-    private Image feedback;
+    private TextMeshProUGUI feedbackText;
 
-    public UnityEvent FalconDone;
-    public UnityEvent GetFolder2;
-    public UnityEvent GetFolder3;
+    public UnityEvent ReconnectedFalcon;
+    public UnityEvent f1, f2, f3, f4, f5;
 
-    public UnityEvent FalconisFinish;
-
+    public UnityEvent WrongMessage;
+    public UnityEvent GoodMessage;
     private void OnEnable()
     {
         SynchronizeManager.OnSyncRequest += ProcessCode;
@@ -29,54 +27,21 @@ public class TestSync : MonoBehaviour
         SynchronizeManager.OnSyncRequest -= ProcessCode;
     }
 
-    public void ProcessCode(int code)
+    public void ProcessCode(string msg)
     {
-        Debug.Log(code);
+        int code;
+        if (!int.TryParse(msg.Split(';')[0], out code))
+            return;
+
         switch (code)
         {
-           
             case 0:
-                //feedback.color = Color.white;
-                //FalconDone.Invoke();
-               //feedbackText.text = "0"; 
+                GoodMessage.Invoke();
                 break;
-            case 1:
-                FalconDone.Invoke();
-
-                //feedback.color = Color.red;
-               // feedbackText.text = "1"; 
+            case 1: //start draw
+                WrongMessage.Invoke();
                 break;
-            case 2:
-                //feedback.color = Color.yellow;
-                //feedbackText.text = "2";
-                break;
-            case 12:
-                GetFolder2.Invoke();
-                break;
-            case 14:
-                GetFolder3.Invoke();
-
-                break;
-
-        }
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.A))
-            FalconisFinish.Invoke();
-
-
-
-        if (Input.GetKeyUp(KeyCode.J))
-        {
-            ModifyScriptable.instance.GetUnlockFolderName("DOSSIER 2");
-
-        }
-        if (Input.GetKeyUp(KeyCode.K))
-        {
-            ModifyScriptable.instance.GetUnlockFolderName("DOSSIER 3");
-
+           
         }
     }
 }

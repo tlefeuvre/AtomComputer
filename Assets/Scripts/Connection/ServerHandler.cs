@@ -18,33 +18,51 @@ public class ServerHandler : MonoBehaviour
     public String Host = "localhost";
     public Int32 Port = 55000;
     public int codeToSend;
+    public bool starOnAwake = false;
 
     private TcpListener listener = null;
     private TcpClient client = null;
     private NetworkStream ns = null;
 
+    private bool started = false;
+
+    private static ServerHandler instance = null;
+    public static ServerHandler Instance => instance;
+
+    public GameObject WaitingConnection;
+    private bool isFirstSent = false;
     // Start is called before the first frame update
     void Awake()
     {
-        listener = new TcpListener(Dns.GetHostEntry(Host).AddressList[1], Port);
-        listener.Start();
-        Debug.Log("is listening");
+        started = false;
+        if (starOnAwake)
+            StartHost();
 
-        if (listener.Pending())
+
+        if (instance != null && instance != this)
         {
-            client = listener.AcceptTcpClient();
-            Debug.Log("Connected");
+            Destroy(this.gameObject);
+            return;
         }
+        else
+        {
+            instance = this;
+        }
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!started)
+            return;
+
         if (client == null)
         {
             if (listener.Pending())
             {
                 client = listener.AcceptTcpClient();
+                WaitingConnection.SetActive(false);
                 Debug.Log("Connected");
             }
             else
@@ -55,10 +73,6 @@ public class ServerHandler : MonoBehaviour
         else
         {
             ProcessMessage();
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                SendMessage(codeToSend);
-            }
         }
     }
 
@@ -71,26 +85,61 @@ public class ServerHandler : MonoBehaviour
             StreamReader reader = new StreamReader(ns);
             string msg = reader.ReadLine();
             Debug.Log(msg);
-
-            int code;
-            if(int.TryParse(msg, out code))
-            {
-                SynchronizeManager.RaiseSyncRequest(code);
-            }
+            SynchronizeManager.RaiseSyncRequest(msg);
         }
     }
 
-    private void SendMessage(int code)
+    public void SendMessage(int code)
     {
-        Byte[] sendBytes = System.Text.Encoding.UTF8.GetBytes(code + "\n");
         Debug.Log("Sending : " + code);
-        client.GetStream().Write(sendBytes, 0, sendBytes.Length);
-        Debug.Log("Sent");
+
+        if(code == 11 && !isFirstSent)
+        {
+            WindowManager.instance.DisplayHiddenFiles();
+            isFirstSent = true;
+        }
+
+
+
+        if (client == null)
+            return;
+        Byte[] sendBytes = System.Text.Encoding.UTF8.GetBytes(code + "\n");
+        if(client.Connected)
+        {
+            client.GetStream().Write(sendBytes, 0, sendBytes.Length);
+            Debug.Log("Sent");
+        }
     }
 
     private void OnApplicationQuit()
     {
         if (listener != null)
             listener.Stop();
+    }
+
+    public void SetIp(string ip)
+    {
+        Host = ip;
+    }
+
+    public void SetPort(string port)
+    {
+        Port = int.Parse(port);
+    }
+
+
+    public void StartHost()
+    {
+        Debug.Log("dns" + Dns.GetHostEntry(Host).AddressList[1]);
+        listener = new TcpListener(Dns.GetHostEntry(Host).AddressList[1], Port);
+        listener.Start();
+        Debug.Log("is listening");
+
+        if (listener.Pending())
+        {
+            client = listener.AcceptTcpClient();
+            Debug.Log("Connected");
+        }
+        started = true;
     }
 }

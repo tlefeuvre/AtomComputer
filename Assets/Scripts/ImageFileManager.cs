@@ -46,8 +46,8 @@ public class ImageFileManager : MonoBehaviour
     {
         sentPopup.SetActive(true);
         StartCoroutine("desactivatepopup");
-
-        ClientManager.instance.SendMessage(idToSend);
+        WindowManager.instance.PlayClickAudio();
+        ServerHandler.Instance.SendMessage(idToSend);
 
 
     }

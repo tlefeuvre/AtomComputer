@@ -11,12 +11,16 @@ public class LoadinScreen : MonoBehaviour
     public float width;
 
     private float widthPerS = 200;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
 
 
     private void OnEnable()
     {
         width = 0;
         startLoading = true;
+        audioSource.clip = audioClip;
+        audioSource.Play();
     }
 
 

@@ -24,7 +24,7 @@ public class MiniGame2 : MonoBehaviour
     {
         for(int i = 0; i < UIPoints.Count; i++)
         {
-            Vector3 newPos = UIPoints[i].transform.position * 102.4f;
+            Vector3 newPos = UIPoints[i].transform.parent.localPosition;
             
             lineRenderer.SetPosition(i, newPos);
         }

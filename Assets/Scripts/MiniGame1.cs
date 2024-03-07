@@ -10,6 +10,9 @@ public class MiniGame1 : MonoBehaviour
 
     private List<GameObject> gameObjects = new List<GameObject>();
     private GameObject PressedButton;
+
+    public AudioSource audioSource;
+    public AudioClip errorAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +26,15 @@ public class MiniGame1 : MonoBehaviour
     }
     public void NotSuccess(GameObject pressedButton)
     {
+        audioSource.clip = errorAudio;
+        audioSource.Play(); 
         //PressedButton = pressedButton;
         //StartCoroutine("CircleAnim");
        
         //on recup l'index du boutton presse
         int index = GetButtonIndex(pressedButton);
         StartCoroutine(ChangeColor(pressedButton));
+
 
 
     }
