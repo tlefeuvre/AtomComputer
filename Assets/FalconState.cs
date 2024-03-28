@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEditor.VersionControl;
 public class FalconState : MonoBehaviour
 {
 
@@ -40,13 +41,13 @@ public class FalconState : MonoBehaviour
         if(state)
         {
             WindowManager.instance.HideHiddenFiles();
-            falconStateText.text = "Falcon activé";
+            falconStateText.text = "Falcon activated";
             falconStateText.color = Color.white;
         }
         else
         {
             WindowManager.instance.DisplayHiddenFiles();
-            falconStateText.text = "Falcon désactivé";
+            falconStateText.text = "Falcon desactivated";
             falconStateText.color = Color.red;
 
 
@@ -54,13 +55,13 @@ public class FalconState : MonoBehaviour
     }
     public void WrongMessageRestart()
     {
-        messageStateText.text = "Message recu incorrect. Replacer la feuille pour recommencer.";
+        messageStateText.text = "Incorrect message received. Replace the sheet to start again.";
         falconStateText.color = Color.red;
 
     }
     public void GoodMessage()
     {
-        messageStateText.text = "Message recu. Placer la feuille au niveau suivant.";
+        messageStateText.text = "Message received.Move sheet to next level.";
         falconStateText.color = Color.green;
 
 

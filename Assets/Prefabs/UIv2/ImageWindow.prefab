@@ -29,7 +29,7 @@ RectTransform:
   m_GameObject: {fileID: 535744139755059048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1593858749626582129}
@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 410, y: -0}
+  m_AnchoredPosition: {x: 410, y: -87.3}
   m_SizeDelta: {x: 258, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6018624810069192143
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Envoy\xE9!"
+  m_text: SENT!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -817,7 +817,7 @@ RectTransform:
   m_GameObject: {fileID: 6976099169313188801}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5185327845468319313}
@@ -825,7 +825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 410, y: -220}
+  m_AnchoredPosition: {x: 410, y: -232}
   m_SizeDelta: {x: 304.045, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2964309127314125044
@@ -931,7 +931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Envoyer le fichier chiffr\xE9 a votre partenaire"
+  m_text: Send the encrypted file to your partner
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f7af0572e039326449da1e379b30858b, type: 2}
   m_sharedMaterial: {fileID: -260516376849091702, guid: f7af0572e039326449da1e379b30858b,
@@ -959,7 +959,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.4
+  m_fontSize: 29.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

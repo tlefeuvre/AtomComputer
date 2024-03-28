@@ -1950,7 +1950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.040236473, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4139,7 +4139,6 @@ RectTransform:
   - {fileID: 4161753462509576143}
   - {fileID: 5433063778933781626}
   - {fileID: 1409854784452735527}
-  - {fileID: 4613331241468124258}
   - {fileID: 6912339390417698530}
   - {fileID: 4848104085287091461}
   - {fileID: 4886637796639071459}
@@ -4151,6 +4150,7 @@ RectTransform:
   - {fileID: 264107538162797304}
   - {fileID: 4056601879448520663}
   - {fileID: 3572547156222388261}
+  - {fileID: 4613331241468124258}
   - {fileID: 4502534576137271158}
   m_Father: {fileID: 4502637888519269026}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5593,6 +5593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d570216a62b794db961fde83d3d02c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  errorAudio: {fileID: 0}
 --- !u!222 &5058768034181832940
 CanvasRenderer:
   m_ObjectHideFlags: 0

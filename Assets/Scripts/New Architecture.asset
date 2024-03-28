@@ -25,31 +25,31 @@ MonoBehaviour:
     imageContent: {fileID: 0}
     type: 0
     childs:
-    - name: DOSSIER 1
+    - name: FOLDER 1
       textFileName: 
       textContent: 
       password: mdp1
       depthIndex: 2
-      isLock: 0
+      isLock: 1
       idToSend: -1
       sendable: 0
       audioContent: {fileID: 0}
       imageContent: {fileID: 0}
-      type: 0
+      type: 3
       childs:
-      - name: DOSSIER 2
+      - name: FOLDER 2
         textFileName: 
         textContent: 
         password: mdp2
         depthIndex: 3
-        isLock: 0
+        isLock: 1
         idToSend: -1
         sendable: 0
         audioContent: {fileID: 0}
         imageContent: {fileID: 0}
-        type: 0
+        type: 3
         childs:
-        - name: DOSSIER 3
+        - name: FOLDER 3
           textFileName: 
           textContent: 
           password: mdp3
@@ -62,7 +62,7 @@ MonoBehaviour:
           imageContent: {fileID: 0}
           type: 3
           childs:
-          - name: DOSSIER 4
+          - name: FOLDER 4
             textFileName: Logs niveau 4
             textContent: logs ssssss
             password: 
@@ -185,7 +185,7 @@ MonoBehaviour:
         isLock: 0
         idToSend: -1
         sendable: 0
-        audioContent: {fileID: 8300000, guid: bc06616d88bff4b4684de8b6e6378c1c, type: 3}
+        audioContent: {fileID: 8300000, guid: 3bec44942277af142882f9e82a4fbfd2, type: 3}
         imageContent: {fileID: 0}
         type: 2
         childs: []

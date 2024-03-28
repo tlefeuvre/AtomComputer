@@ -107,8 +107,8 @@ public class WindowManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        depthPrefab.GetComponentInChildren<TMP_Text>().text ="Niveau "+'\n'+ arborescence[arborescence.Count - 1].depthIndex.ToString();
-        unlockPrefab.GetComponentInChildren<TMP_Text>().text ="Dossier "+'\n'+ (arborescence[arborescence.Count - 1].depthIndex-1).ToString() +" ouvert";
+        depthPrefab.GetComponentInChildren<TMP_Text>().text ="Level "+'\n'+ arborescence[arborescence.Count - 1].depthIndex.ToString();
+        unlockPrefab.GetComponentInChildren<TMP_Text>().text ="Folder "+'\n'+ (arborescence[arborescence.Count - 1].depthIndex-1).ToString() +" unlocked";
         GetComponent<GridLayoutGroup>().enabled = true;
         StartCoroutine("desactivatepopup");
 
