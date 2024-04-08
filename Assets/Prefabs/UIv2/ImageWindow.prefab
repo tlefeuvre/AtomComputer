@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7059005283369431606
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29,7 +29,7 @@ RectTransform:
   m_GameObject: {fileID: 535744139755059048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1593858749626582129}
@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 410, y: -87.3}
+  m_AnchoredPosition: {x: 342, y: -49}
   m_SizeDelta: {x: 258, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6018624810069192143
@@ -604,7 +604,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: 0}
+  m_AnchoredPosition: {x: -182, y: 0}
   m_SizeDelta: {x: 950, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &365055793814587770
@@ -807,7 +807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7106888280762415779
 RectTransform:
   m_ObjectHideFlags: 0
@@ -825,7 +825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 410, y: -232}
+  m_AnchoredPosition: {x: 328, y: -232}
   m_SizeDelta: {x: 304.045, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2964309127314125044
@@ -901,7 +901,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -120}
-  m_SizeDelta: {x: -15.44, y: -15.395}
+  m_SizeDelta: {x: 200, y: -15.395}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2218672357266619829
 CanvasRenderer:
@@ -959,7 +959,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.9
+  m_fontSize: 42.4
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
